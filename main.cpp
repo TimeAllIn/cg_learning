@@ -12,23 +12,13 @@ int main()
 
 	vector2 mouse_posiiton = vector2();
 
-	draw_solidrectangle(vector2(0,0),vector2(700,500),LIGHTBLUE);
+	draw_solidrectangle(vector2(0,0),vector2(500,500),LIGHTBLUE);
+	draw_solidrectangle(vector2(500, 0), vector2(700, 500), LIGHTGREEN);
 	draw_solidrectangle(vector2(0, 500), screen_size);
 
-	creature tt;
-	array_creature a;
-	tt.position = vector2(200, 200);
 	
-	a.append(tt);
-	
-
-	tt.position = vector2(1200, 200);
-
-	a.append(tt);
-	a.append(tt);
-	std::cout << a.temp_creature[2].position<<std::endl;
 	//³ÌÐòÑ­»·
-	/*
+	
 	while (true)
 	{
 		ExMessage mes;
@@ -46,6 +36,6 @@ int main()
 			}
 		}
 	}
-	*/
+	
 	return 0;
 }

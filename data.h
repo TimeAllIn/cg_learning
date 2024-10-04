@@ -80,7 +80,7 @@ struct array_creature
             {
                 temp_creature[i] = temp.temp_creature[i];
             }
-            delete &temp;
+            //delete &temp;
         }    
     }
     //Ñ°¿ÕÉ¾³ı
