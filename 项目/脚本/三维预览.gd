@@ -4,8 +4,7 @@ var mouse_in:bool = false
 
 var mouse_right_down:bool = false
 
-@export var move_speed:float = 10
-@export var rorate_angle:float = 1
+
 
 
 func _on_mouse_entered() -> void:
@@ -31,12 +30,12 @@ func _physics_process(delta: float) -> void:
 		
 			var move_ment = (child_forward * add_ment.x - child_right * add_ment.y)
 			
-			%"摄像机".set_position(%"摄像机".get_position() + move_ment*move_speed * delta)
+			%"摄像机".set_position(%"摄像机".get_position() + move_ment*Data.move_speed * delta)
 			
 			now_right = get_viewport().get_mouse_position()
 			if now_right != last_right:
 				var rotate_ment = Vector3(last_right.y - now_right.y,last_right.x - now_right.x,0)
-				%"摄像机".set_rotation(%"摄像机".get_rotation() + rotate_ment * rorate_angle * delta * 0.1)
+				%"摄像机".set_rotation(%"摄像机".get_rotation() + rotate_ment * Data.rorate_angle * delta * 0.1)
 				last_right = now_right
 				
 				pass

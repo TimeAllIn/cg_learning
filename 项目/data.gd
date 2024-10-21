@@ -29,3 +29,6 @@ func father_draw():
 func change_color(color:Color):
 	draw_color = color
 	color_show.set_modulate(color)
+	
+@export var move_speed:float = 10
+@export var rorate_angle:float = 1

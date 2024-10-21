@@ -22,15 +22,13 @@ vt 0.875000 0.500000\n"
 
 @export var num_array:Array
 @export var block_size:float = 0.5
+
+var load_path:String
+
 func _on_按钮_pressed() -> void:
 	if Data.block_list.size() <= 0:
 		return	
-	var file = FileAccess.open("user://"+$"../文件名称".get_text()+".obj", FileAccess.WRITE)
-	file.store_string(objstring())
-
-
-
-
+	$"../../../文件保存框".set_visible(true)
 
 func objstring():
 	var return_string:String = "#课程设计软件制作，请勿商用" + "\n"
@@ -78,3 +76,14 @@ func objstring():
 		num += 1
 	
 	return return_string
+
+
+func _on_文件保存框_file_selected(path: String) -> void:
+	load_path = path
+	if load_path == "":
+		return
+	else:
+		var file = FileAccess.open(load_path, FileAccess.WRITE)
+		file.store_string(objstring())
+	load_path = ""
+	pass 

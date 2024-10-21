@@ -1394,6 +1394,7 @@ grow_vertical = 2
 flat = true
 
 [node name="详细" type="Panel" parent="画面/工程"]
+visible = false
 clip_contents = true
 layout_mode = 0
 anchor_left = 0.524999
@@ -1446,6 +1447,8 @@ theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "cube"
 alignment = 1
+context_menu_enabled = false
+virtual_keyboard_enabled = false
 flat = true
 
 [node name="预览画面" type="TextureRect" parent="画面"]
@@ -1536,11 +1539,51 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="相关设置" type="Control" parent="详细界面"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = -600.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="输入" type="LineEdit" parent="详细界面/相关设置"]
+layout_mode = 0
+offset_right = 67.0625
+offset_bottom = 31.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(1, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+alignment = 1
+max_length = 2
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+flat = true
+
+[node name="文件保存框" type="FileDialog" parent="."]
+gui_disable_input = true
+title = "选择保存路径"
+initial_position = 2
+size = Vector2i(352, 211)
+force_native = true
+dialog_hide_on_ok = true
+dialog_close_on_escape = false
+access = 2
+filters = PackedStringArray("*.obj")
+use_native_dialog = true
+
 [connection signal="gui_input" from="顶部移动" to="顶部移动" method="_on_gui_input"]
 [connection signal="pressed" from="顶部移动/关闭按钮/关闭" to="顶部移动" method="_on_关闭_pressed"]
 [connection signal="pressed" from="画面/工程/导出/按钮" to="画面/工程/导出" method="_on_按钮_pressed"]
 [connection signal="mouse_entered" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_exited"]
+[connection signal="file_selected" from="文件保存框" to="画面/工程/导出" method="_on_文件保存框_file_selected"]
 
 [editable path="画面/侧/外部工具"]
 [editable path="画面/俯/外部工具"]
