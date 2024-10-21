@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtk34el2xwhwu"]
+
+[ext_resource type="Script" path="res://脚本/网格.gd" id="1_alex1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyr3w"]
+resource_local_to_scene = true
+diffuse_mode = 3
+specular_mode = 1
+emission = Color(1, 1, 1, 1)
+heightmap_scale = -3.937
+point_size = 81.8
+proximity_fade_distance = 58.75
+
+[sub_resource type="BoxMesh" id="BoxMesh_nx4ay"]
+
+[node name="网格" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_vyr3w")
+mesh = SubResource("BoxMesh_nx4ay")
+script = ExtResource("1_alex1")

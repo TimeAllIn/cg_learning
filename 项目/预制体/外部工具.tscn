@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=3 uid="uid://bex30ey2xaiog"]
+
+[ext_resource type="Script" path="res://脚本/外部工具.gd" id="1_58nc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy50n"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0sff"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 1
+
+[node name="外部工具" type="Control" node_paths=PackedStringArray("father_node")]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+script = ExtResource("1_58nc7")
+father_node = NodePath("")
+
+[node name="名称" type="Label" parent="."]
+layout_mode = 1
+offset_right = 60.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "正视图"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="层数" type="Label" parent="."]
+layout_mode = 1
+offset_left = 120.0
+offset_right = 150.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "层"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="层数编辑" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 10.0
+offset_right = 260.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jy50n")
+
+[node name="文本编辑" type="LineEdit" parent="层数编辑"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/selection_color = Color(1, 1, 1, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+placeholder_text = "0"
+alignment = 1
+max_length = 1
+editable = false
+context_menu_enabled = false
+flat = true
+
+[node name="层数减" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0sff")
+
+[node name="操作" type="Button" parent="层数减"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="层数加" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0sff")
+
+[node name="操作" type="Button" parent="层数加"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="层数减/操作" to="." method="_on_操作_pressed"]
+[connection signal="pressed" from="层数加/操作" to="." method="_on_操作add_pressed"]

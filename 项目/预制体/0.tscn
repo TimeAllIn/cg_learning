@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://cehh1y6wc4ptq"]
+
+[ext_resource type="Script" path="res://预制体/绘制.gd" id="1_n0rjj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6bbj"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwd1i"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="0" type="Panel"]
+clip_contents = true
+custom_minimum_size = Vector2(30, 30)
+theme_override_styles/panel = SubResource("StyleBoxFlat_u6bbj")
+script = ExtResource("1_n0rjj")
+
+[node name="背景颜色板" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 0)
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pwd1i")
+
+[node name="按钮" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="按钮" to="." method="_on_按钮_pressed"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc77v32jh4x2x"]
+
+[ext_resource type="Script" path="res://脚本/颜色按钮.gd" id="1_w2m21"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y3he"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[node name="颜色按钮" type="Panel"]
+custom_minimum_size = Vector2(0, 60)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3y3he")
+script = ExtResource("1_w2m21")
+
+[node name="按钮" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="按钮" to="." method="_on_按钮_pressed"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceri2vfsnx6fc"]
+
+[ext_resource type="Script" path="res://脚本/操作.gd" id="1_7gl76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2s84"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="画笔" type="Panel"]
+modulate = Color(0, 0.533333, 1, 1)
+clip_contents = true
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 250.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2s84")
+script = ExtResource("1_7gl76")
+
+[node name="文本" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "画笔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="按钮" type="Button" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="按钮" to="." method="_on_按钮_pressed"]
