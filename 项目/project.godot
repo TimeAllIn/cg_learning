@@ -15,11 +15,14 @@ config/description="计算机图形学课程设计"
 config/version="0.1"
 run/main_scene="res://主场景.tscn"
 config/use_custom_user_dir=true
-config/custom_user_dir_name="objexport"
+config/custom_user_dir_name="课程设计临时文件夹"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/show_image=false
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="res://素材/icon.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
+config/icon="res://素材/icon.png"
+config/windows_native_icon="res://素材/icon.png"
 
 [autoload]
 
@@ -65,3 +68,6 @@ s={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
+textures/lossless_compression/force_png=true

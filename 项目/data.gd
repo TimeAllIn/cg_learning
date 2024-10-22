@@ -22,6 +22,9 @@ var button_array:Array
 
 var color_show
 
+
+var color_array:Array
+
 func father_draw():
 	for i in fater_node:
 		i.draw_color()

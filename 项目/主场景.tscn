@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://b5ebuwiharmd3"]
+[gd_scene load_steps=20 format=3 uid="uid://b5ebuwiharmd3"]
 
 [ext_resource type="Script" path="res://脚本/三维预览.gd" id="1_g1i6x"]
 [ext_resource type="Script" path="res://脚本/顶部移动.gd" id="1_lsf7g"]
 [ext_resource type="PackedScene" uid="uid://cehh1y6wc4ptq" path="res://预制体/0.tscn" id="2_p2frh"]
 [ext_resource type="Script" path="res://脚本/父节点.gd" id="2_u7ovo"]
 [ext_resource type="PackedScene" uid="uid://bex30ey2xaiog" path="res://预制体/外部工具.tscn" id="5_y32dv"]
+[ext_resource type="Script" path="res://脚本/存档功能.gd" id="6_rs2cm"]
 [ext_resource type="PackedScene" uid="uid://ceri2vfsnx6fc" path="res://预制体/画笔.tscn" id="6_y1esw"]
 [ext_resource type="Script" path="res://脚本/功能/导出.gd" id="6_yrdad"]
 [ext_resource type="PackedScene" uid="uid://dc77v32jh4x2x" path="res://预制体/颜色按钮.tscn" id="8_du0v4"]
@@ -1289,6 +1290,7 @@ offset_top = -3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0dct1")
+script = ExtResource("6_rs2cm")
 metadata/_edit_use_anchors_ = true
 
 [node name="保存" type="Panel" parent="画面/工程"]
@@ -1578,12 +1580,44 @@ access = 2
 filters = PackedStringArray("*.obj")
 use_native_dialog = true
 
+[node name="存档加载" type="FileDialog" parent="."]
+auto_translate_mode = 1
+gui_disable_input = true
+title = "选择保存路径"
+initial_position = 2
+size = Vector2i(352, 211)
+force_native = true
+dialog_hide_on_ok = true
+dialog_close_on_escape = false
+access = 2
+filters = PackedStringArray("*.cgLearning", "*.课程设计文件数据")
+use_native_dialog = true
+
+[node name="存档读取" type="FileDialog" parent="."]
+auto_translate_mode = 1
+gui_disable_input = true
+title = "选择文件"
+initial_position = 2
+size = Vector2i(352, 211)
+force_native = true
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+dialog_close_on_escape = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.cgLearning", "*.课程设计文件数据")
+use_native_dialog = true
+
 [connection signal="gui_input" from="顶部移动" to="顶部移动" method="_on_gui_input"]
 [connection signal="pressed" from="顶部移动/关闭按钮/关闭" to="顶部移动" method="_on_关闭_pressed"]
+[connection signal="pressed" from="画面/工程/保存/按钮" to="画面/工程" method="存档"]
+[connection signal="pressed" from="画面/工程/加载/按钮" to="画面/工程" method="读取"]
 [connection signal="pressed" from="画面/工程/导出/按钮" to="画面/工程/导出" method="_on_按钮_pressed"]
 [connection signal="mouse_entered" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_exited"]
 [connection signal="file_selected" from="文件保存框" to="画面/工程/导出" method="_on_文件保存框_file_selected"]
+[connection signal="file_selected" from="存档加载" to="画面/工程" method="存档路径"]
+[connection signal="file_selected" from="存档读取" to="画面/工程" method="读取路径"]
 
 [editable path="画面/侧/外部工具"]
 [editable path="画面/俯/外部工具"]

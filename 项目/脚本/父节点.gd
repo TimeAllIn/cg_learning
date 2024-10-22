@@ -8,7 +8,6 @@ func _ready() -> void:
 	for i in range(get_child_count()):
 		get_child(i).id = i
 		get_child(i).father_node = self
-	print(10%10)
 	pass
 
 func find_position(id:int):

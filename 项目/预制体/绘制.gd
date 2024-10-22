@@ -10,12 +10,12 @@ func _on_按钮_pressed() -> void:
 	var temp_position :Vector3= father_node.find_position(id)
 	if Data.draw:		
 		if Data.draw_list.has(temp_position):
-			print("已经有颜色了")
+
 			return
 		Data.draw_list[temp_position] = Data.draw_color 
 		make_block(temp_position)
 		Data.father_draw()
-		print(temp_position)
+
 	elif Data.eraser:
 		if Data.draw_list.has(temp_position):
 			Data.draw_list.erase(temp_position)
@@ -23,14 +23,14 @@ func _on_按钮_pressed() -> void:
 			Data.block_list.erase(temp_position)
 			Data.father_draw()
 			return
-		print("没有颜色")
+
 	elif Data.painter:
 		if Data.draw_list.has(temp_position):
 			Data.draw_list[temp_position] = Data.draw_color
 			Data.block_list.get(temp_position).make_color(Data.draw_color)
 			Data.father_draw()
 			return
-		print("没有可涂色")
+
 		pass
 	
 	pass

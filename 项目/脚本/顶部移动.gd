@@ -3,11 +3,15 @@ extends Control
 @export var a_color:Color
 @export var b_color:Color
 
+
+
 func _ready() -> void:
 	Data.block_position = $"../三维世界/节点放置"
 	Data.select_color = a_color
 	Data.not_select_color = b_color
 	Data.color_show = $"../画面/工具/工具/当前颜色"
+
+	
 #窗口的移动
 var dragging:bool #拖拽状态
 var v2_mouse:Vector2i #鼠标的偏差
