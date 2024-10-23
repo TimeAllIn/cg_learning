@@ -10,6 +10,7 @@ func _ready() -> void:
 	Data.select_color = a_color
 	Data.not_select_color = b_color
 	Data.color_show = $"../画面/工具/工具/当前颜色"
+	Data.back_ground = $"../背景图片/贴图纹理"
 
 	
 #窗口的移动

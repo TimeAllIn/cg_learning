@@ -3,7 +3,12 @@ extends Control
 
 var mouse_in:bool
 var is_mouse:bool
+
+signal get_mouse_in(value:float)
+
 func 鼠标进入() -> void:
+	if Input.is_action_pressed("mouse_left"):
+		return
 	mouse_in = true
 	pass 
 
@@ -22,6 +27,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if mouse_in or is_mouse:
+		emit_signal("get_mouse_in",value)
 		if Input.is_action_just_pressed("mouse_right"):
 			$"拉动手柄".position.x = canMove
 		is_mouse = Input.is_action_pressed("mouse_left")

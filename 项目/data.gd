@@ -41,4 +41,5 @@ var sizebar:Array
 func make_sizebar():
 	sizebar[0].make_value(rorate_angle/2)
 	sizebar[1].make_value(move_speed/20)
-		
+
+var back_ground
