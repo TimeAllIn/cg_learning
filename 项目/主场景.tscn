@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5ebuwiharmd3"]
+[gd_scene load_steps=40 format=3 uid="uid://b5ebuwiharmd3"]
 
 [ext_resource type="Script" path="res://脚本/三维预览.gd" id="1_g1i6x"]
 [ext_resource type="Script" path="res://脚本/顶部移动.gd" id="1_lsf7g"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://ceri2vfsnx6fc" path="res://预制体/画笔.tscn" id="6_y1esw"]
 [ext_resource type="Script" path="res://脚本/功能/导出.gd" id="6_yrdad"]
 [ext_resource type="PackedScene" uid="uid://dc77v32jh4x2x" path="res://预制体/颜色按钮.tscn" id="8_du0v4"]
+[ext_resource type="Script" path="res://脚本/详细界面.gd" id="10_she2m"]
+[ext_resource type="Script" path="res://脚本/拉动条.gd" id="11_do78b"]
+[ext_resource type="Script" path="res://脚本/重置摄像机按钮.gd" id="12_kjg33"]
+[ext_resource type="Texture2D" uid="uid://c6oohauhjyhkn" path="res://素材/BxReset.png" id="13_cxyod"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5civt"]
 bg_color = Color(1, 1, 1, 1)
@@ -45,6 +49,30 @@ shadow_size = 2
 bg_color = Color(1, 1, 1, 1)
 shadow_size = 2
 
+[sub_resource type="InputEventKey" id="InputEventKey_cfj8f"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_nwus5"]
+events = [SubResource("InputEventKey_cfj8f")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_l17f5"]
+device = -1
+keycode = 50
+unicode = 50
+
+[sub_resource type="Shortcut" id="Shortcut_04e6n"]
+events = [SubResource("InputEventKey_l17f5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_trsvj"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_1dxhg"]
+events = [SubResource("InputEventKey_trsvj")]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dct1"]
 bg_color = Color(1, 1, 1, 1)
 shadow_size = 2
@@ -61,8 +89,41 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
+[sub_resource type="InputEventKey" id="InputEventKey_juv8u"]
+device = -1
+ctrl_pressed = true
+keycode = 83
+
+[sub_resource type="Shortcut" id="Shortcut_kgig2"]
+events = [SubResource("InputEventKey_juv8u")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_dbxko"]
+device = -1
+ctrl_pressed = true
+keycode = 79
+
+[sub_resource type="Shortcut" id="Shortcut_c5ccq"]
+events = [SubResource("InputEventKey_dbxko")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_hdyq1"]
+device = -1
+ctrl_pressed = true
+keycode = 69
+
+[sub_resource type="Shortcut" id="Shortcut_woles"]
+events = [SubResource("InputEventKey_hdyq1")]
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_rhxg8"]
 viewport_path = NodePath("三维世界/摄像机屏幕")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8hkt"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwbpl"]
 bg_color = Color(1, 1, 1, 1)
@@ -70,6 +131,24 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i364g"]
+bg_color = Color(0, 0.00625014, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o12t"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_qj84s"]
+number_color = Color(1, 0, 0, 1)
+symbol_color = Color(0.275, 0, 1, 1)
 
 [node name="主场景" type="Panel"]
 anchors_preset = 15
@@ -79,13 +158,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5civt")
 
+[node name="文本" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "课程设计项目"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="三维世界" type="Node" parent="."]
 
 [node name="世界环境" type="WorldEnvironment" parent="三维世界"]
 environment = SubResource("Environment_wscdy")
 
 [node name="摄像机屏幕" type="SubViewport" parent="三维世界"]
-transparent_bg = true
 size = Vector2i(300, 300)
 
 [node name="摄像机" type="Camera3D" parent="三维世界/摄像机屏幕"]
@@ -1216,6 +1303,10 @@ offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_use_anchors_ = true
 
+[node name="按钮" parent="画面/工具/工具/画笔" index="1"]
+shortcut = SubResource("Shortcut_nwus5")
+metadata/_edit_use_anchors_ = true
+
 [node name="橡皮" parent="画面/工具/工具" instance=ExtResource("6_y1esw")]
 layout_mode = 1
 anchors_preset = -1
@@ -1233,6 +1324,9 @@ metadata/_edit_use_anchors_ = true
 [node name="文本" parent="画面/工具/工具/橡皮" index="0"]
 text = "橡皮"
 
+[node name="按钮" parent="画面/工具/工具/橡皮" index="1"]
+shortcut = SubResource("Shortcut_04e6n")
+
 [node name="涂料" parent="画面/工具/工具" instance=ExtResource("6_y1esw")]
 layout_mode = 1
 anchors_preset = -1
@@ -1249,6 +1343,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="文本" parent="画面/工具/工具/涂料" index="0"]
 text = "涂料"
+
+[node name="按钮" parent="画面/工具/工具/涂料" index="1"]
+shortcut = SubResource("Shortcut_1dxhg")
 
 [node name="当前颜色" type="Panel" parent="画面/工具/工具"]
 modulate = Color(0, 0, 0, 1)
@@ -1324,6 +1421,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+shortcut = SubResource("Shortcut_kgig2")
 flat = true
 
 [node name="加载" type="Panel" parent="画面/工程"]
@@ -1357,6 +1455,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+shortcut = SubResource("Shortcut_c5ccq")
 flat = true
 
 [node name="导出" type="Panel" parent="画面/工程"]
@@ -1393,10 +1492,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+shortcut = SubResource("Shortcut_woles")
 flat = true
 
 [node name="详细" type="Panel" parent="画面/工程"]
-visible = false
 clip_contents = true
 layout_mode = 0
 anchor_left = 0.524999
@@ -1523,15 +1622,46 @@ layout_mode = 2
 modulate = Color(0.6125, 0, 1, 1)
 layout_mode = 2
 
-[node name="详细界面" type="Panel" parent="."]
-visible = false
+[node name="重置摄像机按钮" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 508.0
+offset_right = 1155.0
+offset_bottom = 543.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j8hkt")
+script = ExtResource("12_kjg33")
+
+[node name="纹理" type="TextureRect" parent="重置摄像机按钮"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("13_cxyod")
+expand_mode = 1
+
+[node name="按钮" type="Button" parent="重置摄像机按钮"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="详细界面" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pwbpl")
+script = ExtResource("10_she2m")
 
 [node name="文本记录" type="Control" parent="详细界面"]
 layout_mode = 1
@@ -1546,27 +1676,223 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 60.0
-offset_top = 50.0
-offset_right = -600.0
-offset_bottom = -35.0
+offset_left = 49.0
+offset_top = 40.0
+offset_right = -611.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="输入" type="LineEdit" parent="详细界面/相关设置"]
-layout_mode = 0
-offset_right = 67.0625
-offset_bottom = 31.0
-theme_override_colors/selection_color = Color(0, 0, 0, 1)
-theme_override_colors/caret_color = Color(1, 0, 0, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+[node name="灵敏度" type="Control" parent="详细界面/相关设置"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 130.0
+grow_horizontal = 2
+
+[node name="拉动条" type="Control" parent="详细界面/相关设置/灵敏度"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -50.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("11_do78b")
+
+[node name="背景板" type="Panel" parent="详细界面/相关设置/灵敏度/拉动条"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i364g")
+
+[node name="拉动手柄" type="Panel" parent="详细界面/相关设置/灵敏度/拉动条"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(25, 25)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1o12t")
+
+[node name="数值" type="Label" parent="详细界面/相关设置/灵敏度"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -139.0
+offset_bottom = 70.0
+grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "1"
-alignment = 1
-max_length = 2
-context_menu_enabled = false
-virtual_keyboard_enabled = false
+theme_override_font_sizes/font_size = 50
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="文本" type="Label" parent="详细界面/相关设置/灵敏度"]
+layout_mode = 1
+offset_right = 139.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "视线灵敏度:
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="移动速度" type="Control" parent="详细界面/相关设置"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 190.0
+offset_right = 1.0
+offset_bottom = 320.0
+grow_horizontal = 2
+
+[node name="拉动条" type="Control" parent="详细界面/相关设置/移动速度"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -50.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("11_do78b")
+id = 1
+
+[node name="背景板" type="Panel" parent="详细界面/相关设置/移动速度/拉动条"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i364g")
+
+[node name="拉动手柄" type="Panel" parent="详细界面/相关设置/移动速度/拉动条"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(25, 25)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1o12t")
+
+[node name="数值" type="Label" parent="详细界面/相关设置/移动速度"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -139.0
+offset_bottom = 70.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "10
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="文本" type="Label" parent="详细界面/相关设置/移动速度"]
+layout_mode = 1
+offset_right = 139.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "移动速度:
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="退出" type="Panel" parent="详细界面"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.741667
+anchor_top = 0.8
+anchor_right = 0.941667
+anchor_bottom = 0.924
+theme_override_styles/panel = SubResource("StyleBoxFlat_xa5es")
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="详细界面/退出"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "退出"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="按钮" type="Button" parent="详细界面/退出"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 flat = true
+
+[node name="Label" type="CodeEdit" parent="详细界面"]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 46.0
+offset_right = 1142.0
+offset_bottom = 536.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(1, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0.00625014, 1, 1)
+theme_override_colors/line_number_color = Color(1, 0, 0, 1)
+text = "该项目用于湖南工业大学的计算机图形学的课程设计
+主要基于三视图角度生成三维模型
+该项目已在GitHub开源，请注意：
+如果你需要改进该项目源代码乃至于进一步发展该程序，
+你需要遵守Apache License 2.0协议
+
+GitHub:https://github.com/TimeAllIn/cg_learning"
+context_menu_enabled = false
+scroll_smooth = true
+syntax_highlighter = SubResource("CodeHighlighter_qj84s")
+highlight_all_occurrences = true
+gutters_draw_line_numbers = true
 
 [node name="文件保存框" type="FileDialog" parent="."]
 gui_disable_input = true
@@ -1596,7 +1922,7 @@ use_native_dialog = true
 [node name="存档读取" type="FileDialog" parent="."]
 auto_translate_mode = 1
 gui_disable_input = true
-title = "选择文件"
+title = "Open a File"
 initial_position = 2
 size = Vector2i(352, 211)
 force_native = true
@@ -1613,13 +1939,21 @@ use_native_dialog = true
 [connection signal="pressed" from="画面/工程/保存/按钮" to="画面/工程" method="存档"]
 [connection signal="pressed" from="画面/工程/加载/按钮" to="画面/工程" method="读取"]
 [connection signal="pressed" from="画面/工程/导出/按钮" to="画面/工程/导出" method="_on_按钮_pressed"]
+[connection signal="pressed" from="画面/工程/详细/按钮" to="详细界面" method="进入"]
 [connection signal="mouse_entered" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_exited"]
+[connection signal="pressed" from="重置摄像机按钮/按钮" to="重置摄像机按钮" method="重置摄像机"]
+[connection signal="mouse_entered" from="详细界面/相关设置/灵敏度/拉动条/拉动手柄" to="详细界面/相关设置/灵敏度/拉动条" method="鼠标进入"]
+[connection signal="mouse_exited" from="详细界面/相关设置/灵敏度/拉动条/拉动手柄" to="详细界面/相关设置/灵敏度/拉动条" method="鼠标离开"]
+[connection signal="mouse_entered" from="详细界面/相关设置/移动速度/拉动条/拉动手柄" to="详细界面/相关设置/移动速度/拉动条" method="鼠标进入"]
+[connection signal="mouse_exited" from="详细界面/相关设置/移动速度/拉动条/拉动手柄" to="详细界面/相关设置/移动速度/拉动条" method="鼠标离开"]
+[connection signal="pressed" from="详细界面/退出/按钮" to="详细界面" method="退出"]
 [connection signal="file_selected" from="文件保存框" to="画面/工程/导出" method="_on_文件保存框_file_selected"]
 [connection signal="file_selected" from="存档加载" to="画面/工程" method="存档路径"]
 [connection signal="file_selected" from="存档读取" to="画面/工程" method="读取路径"]
 
 [editable path="画面/侧/外部工具"]
 [editable path="画面/俯/外部工具"]
+[editable path="画面/工具/工具/画笔"]
 [editable path="画面/工具/工具/橡皮"]
 [editable path="画面/工具/工具/涂料"]

@@ -12,10 +12,13 @@ config_version=5
 
 config/name="计算机图形学"
 config/description="计算机图形学课程设计"
-config/version="0.1"
+config/version="1.0"
+config/tags=PackedStringArray("git", "课程设计")
 run/main_scene="res://主场景.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="课程设计临时文件夹"
+config/auto_accept_quit=false
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/image="res://素材/icon.png"
@@ -35,6 +38,12 @@ window/size/viewport_height=800
 window/size/borderless=true
 window/size/transparent=true
 window/per_pixel_transparency/allowed=true
+
+[importer_defaults]
+
+3d_texture={
+"compress/mode": 3
+}
 
 [input]
 
@@ -61,6 +70,11 @@ w={
 s={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+mouse_left={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(166, 6),"global_position":Vector2(178, 63),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 

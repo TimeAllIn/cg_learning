@@ -35,3 +35,10 @@ func change_color(color:Color):
 	
 @export var move_speed:float = 10
 @export var rorate_angle:float = 1
+
+var sizebar:Array
+
+func make_sizebar():
+	sizebar[0].make_value(rorate_angle/2)
+	sizebar[1].make_value(move_speed/20)
+		
