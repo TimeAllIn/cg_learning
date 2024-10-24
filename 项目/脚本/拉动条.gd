@@ -26,6 +26,8 @@ func _ready() -> void:
 	Data.sizebar.append(self)
 
 func _physics_process(delta: float) -> void:
+	if not $"../../..".is_visible():
+		return
 	if mouse_in or is_mouse:
 		emit_signal("get_mouse_in",value)
 		if Input.is_action_just_pressed("mouse_right"):

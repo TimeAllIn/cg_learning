@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://b5ebuwiharmd3"]
+[gd_scene load_steps=47 format=3 uid="uid://b5ebuwiharmd3"]
 
 [ext_resource type="Script" path="res://脚本/三维预览.gd" id="1_g1i6x"]
 [ext_resource type="Script" path="res://脚本/顶部移动.gd" id="1_lsf7g"]
@@ -8,10 +8,12 @@
 [ext_resource type="Script" path="res://脚本/存档功能.gd" id="6_rs2cm"]
 [ext_resource type="PackedScene" uid="uid://ceri2vfsnx6fc" path="res://预制体/画笔.tscn" id="6_y1esw"]
 [ext_resource type="Script" path="res://脚本/功能/导出.gd" id="6_yrdad"]
+[ext_resource type="Script" path="res://脚本/开始游戏.gd" id="8_bf2u3"]
 [ext_resource type="PackedScene" uid="uid://dc77v32jh4x2x" path="res://预制体/颜色按钮.tscn" id="8_du0v4"]
 [ext_resource type="Script" path="res://脚本/详细界面.gd" id="10_she2m"]
 [ext_resource type="Script" path="res://脚本/拉动条.gd" id="11_do78b"]
 [ext_resource type="Script" path="res://脚本/重置摄像机按钮.gd" id="12_kjg33"]
+[ext_resource type="Script" path="res://脚本/重置全局.gd" id="12_mb230"]
 [ext_resource type="Texture2D" uid="uid://c6oohauhjyhkn" path="res://素材/BxReset.png" id="13_cxyod"]
 [ext_resource type="Script" path="res://脚本/背景图片导入.gd" id="15_g7nut"]
 
@@ -178,6 +180,9 @@ corner_detail = 20
 number_color = Color(1, 0, 0, 1)
 symbol_color = Color(0.275, 0, 1, 1)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_foin4"]
+viewport_path = NodePath("三维世界/游戏屏幕")
+
 [node name="主场景" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -240,10 +245,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -2.98023e-08, 1, 1, 0, 0)
 [node name="up" type="Node3D" parent="三维世界/摄像机屏幕/摄像机"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
+[node name="游戏屏幕" type="SubViewport" parent="三维世界"]
+size = Vector2i(1200, 800)
+
 [node name="节点放置" type="Node" parent="三维世界"]
 
 [node name="灯光" type="DirectionalLight3D" parent="三维世界"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3, 0)
+
+[node name="游戏空间" type="Node" parent="三维世界"]
 
 [node name="顶部移动" type="Control" parent="."]
 layout_mode = 1
@@ -1546,6 +1556,44 @@ grow_vertical = 2
 shortcut = SubResource("Shortcut_woles")
 flat = true
 
+[node name="开始游戏" type="Panel" parent="画面/工程"]
+visible = false
+clip_contents = true
+layout_mode = 0
+anchor_left = 0.0500009
+anchor_top = 0.450002
+anchor_right = 0.449999
+anchor_bottom = 0.750004
+theme_override_styles/panel = SubResource("StyleBoxFlat_xa5es")
+script = ExtResource("8_bf2u3")
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="画面/工程/开始游戏"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "开始游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="按钮" type="Button" parent="画面/工程/开始游戏"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+shortcut_feedback = false
+shortcut_in_tooltip = false
+flat = true
+
 [node name="详细" type="Panel" parent="画面/工程"]
 clip_contents = true
 layout_mode = 0
@@ -1675,9 +1723,9 @@ layout_mode = 2
 
 [node name="重置摄像机按钮" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1120.0
+offset_left = 1080.0
 offset_top = 508.0
-offset_right = 1155.0
+offset_right = 1115.0
 offset_bottom = 543.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_j8hkt")
 script = ExtResource("12_kjg33")
@@ -1693,6 +1741,35 @@ texture = ExtResource("13_cxyod")
 expand_mode = 1
 
 [node name="按钮" type="Button" parent="重置摄像机按钮"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="重置全局" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 508.0
+offset_right = 1160.0
+offset_bottom = 543.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j8hkt")
+script = ExtResource("12_mb230")
+
+[node name="纹理" type="TextureRect" parent="重置全局"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_cxyod")
+expand_mode = 1
+
+[node name="按钮" type="Button" parent="重置全局"]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 15
@@ -2150,7 +2227,7 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="Label" type="CodeEdit" parent="详细界面"]
+[node name="介绍" type="CodeEdit" parent="详细界面"]
 layout_mode = 0
 offset_left = 690.0
 offset_top = 46.0
@@ -2167,8 +2244,12 @@ text = "该项目用于湖南工业大学的计算机图形学的课程设计
 该项目已在GitHub开源，请注意：
 如果你需要改进该项目源代码乃至于进一步发展该程序，
 你需要遵守Apache License 2.0协议
-
-GitHub:https://github.com/TimeAllIn/cg_learning"
+GitHub:https://github.com/TimeAllIn/cg_learning
+关于游戏模式:
+进入游戏模式需要导入(*.cgGame)文件
+游戏模式默认第一个十色方块为玩家
+十色方块(第10号颜色，即色盘最下处紫色)
+进入游戏空间后，按下ESC按键即可退出整个游戏模式"
 context_menu_enabled = false
 scroll_smooth = true
 syntax_highlighter = SubResource("CodeHighlighter_qj84s")
@@ -2197,7 +2278,7 @@ force_native = true
 dialog_hide_on_ok = true
 dialog_close_on_escape = false
 access = 2
-filters = PackedStringArray("*.cgLearning", "*.课程设计文件数据")
+filters = PackedStringArray("*.cgLearn", "*.cgGame")
 use_native_dialog = true
 
 [node name="存档读取" type="FileDialog" parent="."]
@@ -2212,7 +2293,7 @@ dialog_hide_on_ok = true
 dialog_close_on_escape = false
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.cgLearning", "*.课程设计文件数据")
+filters = PackedStringArray("*.cgLearn,*.cgGame")
 use_native_dialog = true
 
 [node name="背景图导入" type="FileDialog" parent="."]
@@ -2247,15 +2328,50 @@ use_native_dialog = true
 
 [node name="音乐播放器" type="AudioStreamPlayer" parent="."]
 
+[node name="游戏纹理" type="Panel" parent="."]
+visible = false
+clip_children = 1
+visibility_layer = 2
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4faex")
+
+[node name="游戏纹理" type="TextureRect" parent="游戏纹理"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_foin4")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="文本" type="Label" parent="游戏纹理"]
+offset_right = 1200.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "按下\"ESC\"退出游戏模式"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="gui_input" from="顶部移动" to="顶部移动" method="_on_gui_input"]
 [connection signal="pressed" from="顶部移动/关闭按钮/关闭" to="顶部移动" method="_on_关闭_pressed"]
 [connection signal="pressed" from="画面/工程/保存/按钮" to="画面/工程" method="存档"]
 [connection signal="pressed" from="画面/工程/加载/按钮" to="画面/工程" method="读取"]
 [connection signal="pressed" from="画面/工程/导出/按钮" to="画面/工程/导出" method="_on_按钮_pressed"]
+[connection signal="visibility_changed" from="画面/工程/开始游戏" to="画面/工程/开始游戏" method="是否可见"]
+[connection signal="pressed" from="画面/工程/开始游戏/按钮" to="画面/工程/开始游戏" method="开始游戏"]
 [connection signal="pressed" from="画面/工程/详细/按钮" to="详细界面" method="进入"]
 [connection signal="mouse_entered" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="画面/预览画面" to="画面/预览画面" method="_on_mouse_exited"]
 [connection signal="pressed" from="重置摄像机按钮/按钮" to="重置摄像机按钮" method="重置摄像机"]
+[connection signal="pressed" from="重置全局/按钮" to="重置全局" method="按钮按下"]
 [connection signal="mouse_entered" from="详细界面/相关设置/灵敏度/拉动条/拉动手柄" to="详细界面/相关设置/灵敏度/拉动条" method="鼠标进入"]
 [connection signal="mouse_exited" from="详细界面/相关设置/灵敏度/拉动条/拉动手柄" to="详细界面/相关设置/灵敏度/拉动条" method="鼠标离开"]
 [connection signal="mouse_entered" from="详细界面/相关设置/移动速度/拉动条/拉动手柄" to="详细界面/相关设置/移动速度/拉动条" method="鼠标进入"]

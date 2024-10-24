@@ -43,3 +43,8 @@ func make_sizebar():
 	sizebar[1].make_value(move_speed/20)
 
 var back_ground
+
+
+
+#游戏模式
+var game_mode:bool = false

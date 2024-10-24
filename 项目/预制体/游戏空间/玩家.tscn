@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwg2xfw7v4g7u"]
+
+[ext_resource type="Script" path="res://脚本/游戏模式/玩家.gd" id="1_op8q8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wbgh"]
+resource_local_to_scene = true
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_4bsxq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0tmlh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ifqt"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="玩家" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+script = ExtResource("1_op8q8")
+
+[node name="网格" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8wbgh")
+mesh = SubResource("BoxMesh_4bsxq")
+
+[node name="碰撞体" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0tmlh")
+
+[node name="检测地面" type="Area3D" parent="."]
+
+[node name="碰撞体" type="CollisionShape3D" parent="检测地面"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
+shape = SubResource("BoxShape3D_6ifqt")
+
+[node name="摄像机" type="Node3D" parent="."]
+editor_description = "x -50  -10
+y 360
+"
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0)
+
+[node name="摄像机" type="Camera3D" parent="摄像机"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="旋转轴" type="Node3D" parent="."]
+
+[node name="right" type="Node3D" parent="旋转轴"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="forward" type="Node3D" parent="旋转轴"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[connection signal="body_entered" from="检测地面" to="." method="进入地面"]
+[connection signal="body_exited" from="检测地面" to="." method="离开地面"]

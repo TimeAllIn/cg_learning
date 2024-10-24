@@ -7,10 +7,11 @@ const block = preload("res://预制体/网格.tscn")
 
 
 func _on_按钮_pressed() -> void:
+	if Data.game_mode:
+		return
 	var temp_position :Vector3= father_node.find_position(id)
 	if Data.draw:		
 		if Data.draw_list.has(temp_position):
-
 			return
 		Data.draw_list[temp_position] = Data.draw_color 
 		make_block(temp_position)

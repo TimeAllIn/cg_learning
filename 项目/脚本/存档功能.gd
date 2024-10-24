@@ -52,6 +52,12 @@ func 读取路径(path: String) -> void:
 		make_block(i,Data.draw_list.get(i))
 		pass
 	
+	if path.get_extension() == "cgGame":
+		Data.game_mode = true
+		
+	else:
+		Data.game_mode = false
+	$"开始游戏".set_visible(Data.game_mode)
 	pass 
 
 func make_block(make_position:Vector3,draw_color:Color):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtk34el2xwhwu"]
+[gd_scene load_steps=5 format=3 uid="uid://dtk34el2xwhwu"]
 
 [ext_resource type="Script" path="res://脚本/网格.gd" id="1_alex1"]
 
@@ -13,7 +13,14 @@ proximity_fade_distance = 58.75
 
 [sub_resource type="BoxMesh" id="BoxMesh_nx4ay"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_w33dt"]
+
 [node name="网格" type="MeshInstance3D"]
 material_override = SubResource("StandardMaterial3D_vyr3w")
 mesh = SubResource("BoxMesh_nx4ay")
 script = ExtResource("1_alex1")
+
+[node name="碰撞" type="StaticBody3D" parent="."]
+
+[node name="碰撞体" type="CollisionShape3D" parent="碰撞"]
+shape = SubResource("BoxShape3D_w33dt")
