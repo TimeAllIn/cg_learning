@@ -47,3 +47,11 @@ func make_block(make_position:Vector3):
 
 func draw_color(color:Color):
 	$"背景颜色板".set_modulate(color)
+
+
+
+
+func _on_按钮_mouse_entered() -> void:
+	if Input.is_action_pressed("mouse_left"):
+		_on_按钮_pressed()
+	pass # Replace with function body.

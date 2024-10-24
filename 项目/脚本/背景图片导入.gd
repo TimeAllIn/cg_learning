@@ -10,7 +10,14 @@ func 导入图片() -> void:
 func 背景图选中(path: String) -> void:
 	$"../路径".set_text(path)
 	var bg_image = Image.load_from_file(path)
-	Data.back_ground.set_texture(ImageTexture.create_from_image(bg_image))
+	
+	var save_it = save_data.new()
+	save_it.back_ground = ImageTexture.create_from_image(bg_image)
+	
+	Data.back_ground.set_texture(save_it.back_ground)
+	
+	ResourceSaver.save(save_it,"user://data.res")
+	
 	pass
 
 
