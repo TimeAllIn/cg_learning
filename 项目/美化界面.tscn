@@ -1,13 +1,13 @@
-[gd_scene load_steps=127 format=3 uid="uid://cvehsw4k52uag"]
+[gd_scene load_steps=129 format=3 uid="uid://cvehsw4k52uag"]
 
-[ext_resource type="Script" path="res://美化脚本/功能集合.gd" id="1_dpilk"]
+[ext_resource type="Script" path="res://脚本/功能集合.gd" id="1_dpilk"]
 [ext_resource type="PackedScene" uid="uid://dhq7guhmbml0l" path="res://美化预制体/按钮.tscn" id="1_qasb1"]
 [ext_resource type="Script" path="res://脚本/顶部移动.gd" id="1_qyogm"]
-[ext_resource type="Script" path="res://美化脚本/图标.gd" id="2_dcaxp"]
+[ext_resource type="Script" path="res://脚本/图标.gd" id="2_dcaxp"]
 [ext_resource type="Texture2D" uid="uid://ceqqnvxwp6vxx" path="res://素材/建模Apaache_2.0.png" id="2_pwo1q"]
 [ext_resource type="Script" path="res://脚本/父节点.gd" id="3_uv50b"]
 [ext_resource type="Texture2D" uid="uid://bdohtkj708g8r" path="res://素材/美化素材/工作台Apache_2.0.png" id="4_2hulw"]
-[ext_resource type="Script" path="res://美化脚本/颜料选择.gd" id="4_3m261"]
+[ext_resource type="Script" path="res://脚本/颜料选择.gd" id="4_3m261"]
 [ext_resource type="Script" path="res://脚本/重置摄像机按钮.gd" id="4_5tcfs"]
 [ext_resource type="PackedScene" uid="uid://cehh1y6wc4ptq" path="res://预制体/0.tscn" id="4_6iskt"]
 [ext_resource type="Texture2D" uid="uid://bnpa52x52a8h6" path="res://素材/美化素材/齿轮Apache_2.0.png" id="5_atqw4"]
@@ -18,11 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://ble6gn304ldqg" path="res://美化预制体/外部工具.tscn" id="7_5huab"]
 [ext_resource type="Texture2D" uid="uid://b46j8jlln1usr" path="res://素材/美化素材/铅笔MIT.png" id="7_ea5lf"]
 [ext_resource type="Texture2D" uid="uid://bnaddpv8hatue" path="res://素材/美化素材/橡皮CCBY4.0.png" id="8_lmv32"]
-[ext_resource type="Script" path="res://美化脚本/音乐播放器.gd" id="9_0kcx5"]
+[ext_resource type="Script" path="res://脚本/音乐播放器.gd" id="9_0kcx5"]
 [ext_resource type="Texture2D" uid="uid://bsappbujtxqw4" path="res://素材/美化素材/刷子Apache_2.0.png" id="9_2bv3i"]
-[ext_resource type="Script" path="res://美化脚本/导出全代码.gd" id="10_s3t8c"]
+[ext_resource type="Script" path="res://脚本/导出全代码.gd" id="10_s3t8c"]
 [ext_resource type="Texture2D" uid="uid://dwomlefusb5b4" path="res://素材/美化素材/摄像机MIT.png" id="11_kqiio"]
-[ext_resource type="Script" path="res://美化脚本/设置.gd" id="12_8fwpo"]
+[ext_resource type="Script" path="res://脚本/设置.gd" id="12_8fwpo"]
 [ext_resource type="PackedScene" uid="uid://bok0psi6ay1cv" path="res://美化预制体/滑动条.tscn" id="12_hodbm"]
 [ext_resource type="Texture2D" uid="uid://pkgevaogcl53" path="res://素材/美化素材/垃圾桶MIT.png" id="13_dvqwd"]
 [ext_resource type="Texture2D" uid="uid://cnrileb0eqf61" path="res://素材/美化素材/暂停.png" id="20_i0fij"]
@@ -1630,23 +1630,6 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 corner_detail = 20
 
-[sub_resource type="Animation" id="Animation_k8l7u"]
-resource_name = "个人到服务"
-length = 0.1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("选择:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(102, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_oh5mi"]
 length = 0.001
 tracks/0/type = "value"
@@ -1677,6 +1660,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(204, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k8l7u"]
+resource_name = "个人到服务"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("选择:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(102, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ikiw5"]
@@ -1731,7 +1731,35 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 corner_detail = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s8s4"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yslpn"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fn03r"]
+resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
 border_width_top = 1
@@ -5528,7 +5556,7 @@ anchor_top = 0.725926
 anchor_right = 0.653595
 anchor_bottom = 0.962963
 grow_horizontal = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_730ts")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8s8s4")
 
 [node name="文本" type="Label" parent="设置/协作模式/标题/服务端/按钮"]
 layout_mode = 1
@@ -5642,7 +5670,7 @@ anchor_top = 0.725926
 anchor_right = 0.653595
 anchor_bottom = 0.962963
 grow_horizontal = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_730ts")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fn03r")
 
 [node name="文本" type="Label" parent="设置/协作模式/标题/客户端/按钮"]
 layout_mode = 1

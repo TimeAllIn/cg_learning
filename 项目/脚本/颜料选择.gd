@@ -1,4 +1,4 @@
-extends "res://美化脚本/按钮.gd"
+extends "res://脚本/按钮.gd"
 
 var to_color
 @export var id:String

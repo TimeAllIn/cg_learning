@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bok0psi6ay1cv"]
 
-[ext_resource type="Script" path="res://美化脚本/滑动条.gd" id="1_2tnyl"]
+[ext_resource type="Script" path="res://脚本/滑动条.gd" id="1_2tnyl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uw380"]
 bg_color = Color(1, 1, 1, 1)

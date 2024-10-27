@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhq7guhmbml0l"]
 
-[ext_resource type="Script" path="res://美化脚本/按钮.gd" id="1_rojbm"]
+[ext_resource type="Script" path="res://脚本/按钮.gd" id="1_rojbm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3bcx"]
 resource_local_to_scene = true

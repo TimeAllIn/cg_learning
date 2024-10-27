@@ -13,7 +13,7 @@ config_version=5
 config/name="计算机图形学"
 config/description="计算机图形学课程设计
 V2.1:增加局域网协作功能"
-config/version="2.1"
+config/version="2.1.1"
 config/tags=PackedStringArray("git", "课程设计")
 run/main_scene="res://美化界面.tscn"
 config/use_custom_user_dir=true
@@ -28,8 +28,7 @@ config/windows_native_icon="res://素材/图标文件.ico"
 
 [autoload]
 
-Data="res://data.gd"
-NewData="*res://美化脚本/new_data.gd"
+NewData="*res://脚本/new_data.gd"
 
 [display]
 
