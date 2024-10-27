@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://bok0psi6ay1cv"]
+
+[ext_resource type="Script" path="res://美化脚本/滑动条.gd" id="1_2tnyl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uw380"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jrpd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 20
+
+[node name="滑动条" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 100.0
+script = ExtResource("1_2tnyl")
+
+[node name="滑动条" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uw380")
+metadata/_edit_use_anchors_ = true
+
+[node name="容器" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416667
+anchor_right = 0.583333
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="滑动杆" type="Panel" parent="容器"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4jrpd")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="容器/滑动杆" to="." method="鼠标进入"]
+[connection signal="mouse_exited" from="容器/滑动杆" to="." method="鼠标离开"]

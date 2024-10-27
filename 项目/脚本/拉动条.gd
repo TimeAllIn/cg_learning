@@ -3,7 +3,12 @@ extends Control
 
 var mouse_in:bool
 var is_mouse:bool
+
+signal get_mouse_in(value:float)
+
 func 鼠标进入() -> void:
+	if Input.is_action_pressed("mouse_left"):
+		return
 	mouse_in = true
 	pass 
 
@@ -18,10 +23,13 @@ var now_mouse:Vector2
 var canMove:float
 func _ready() -> void:
 	canMove = $"拉动手柄".position.x
-	Data.sizebar.append(self)
+	NewData.sizebar.append(self)
 
 func _physics_process(delta: float) -> void:
+	if not $"../../..".is_visible():
+		return
 	if mouse_in or is_mouse:
+		emit_signal("get_mouse_in",value)
 		if Input.is_action_just_pressed("mouse_right"):
 			$"拉动手柄".position.x = canMove
 		is_mouse = Input.is_action_pressed("mouse_left")
@@ -51,6 +59,6 @@ func return_value():
 func make_value(set_value:float = 0.5):
 	$"拉动手柄".position.x = (canMove * 2) * set_value
 	if id == 0:
-		$"../数值".text = str(Data.rorate_angle)
+		$"../数值".text = str(NewData.rorate_angle)
 	elif id == 1:
-		$"../../移动速度/数值".text = str(Data.move_speed)
+		$"../../移动速度/数值".text = str(NewData.move_speed)

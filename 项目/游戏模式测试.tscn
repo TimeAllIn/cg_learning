@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpx0l0bswo4jc"]
+
+[ext_resource type="Script" path="res://脚本/网格.gd" id="1_bymxy"]
+[ext_resource type="PackedScene" uid="uid://dwg2xfw7v4g7u" path="res://预制体/游戏空间/玩家.tscn" id="2_axl0x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52p3h"]
+resource_local_to_scene = true
+diffuse_mode = 3
+specular_mode = 1
+emission = Color(1, 1, 1, 1)
+heightmap_scale = -3.937
+point_size = 81.8
+proximity_fade_distance = 58.75
+
+[sub_resource type="BoxMesh" id="BoxMesh_nx4ay"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w33dt"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="网格" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_52p3h")
+mesh = SubResource("BoxMesh_nx4ay")
+script = ExtResource("1_bymxy")
+
+[node name="碰撞" type="StaticBody3D" parent="网格"]
+
+[node name="碰撞体" type="CollisionShape3D" parent="网格/碰撞"]
+shape = SubResource("BoxShape3D_w33dt")
+
+[node name="网格2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_52p3h")
+mesh = SubResource("BoxMesh_nx4ay")
+script = ExtResource("1_bymxy")
+
+[node name="碰撞" type="StaticBody3D" parent="网格2"]
+
+[node name="碰撞体" type="CollisionShape3D" parent="网格2/碰撞"]
+shape = SubResource("BoxShape3D_w33dt")
+
+[node name="玩家" parent="." instance=ExtResource("2_axl0x")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 9, 0)

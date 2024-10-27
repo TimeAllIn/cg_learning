@@ -1,0 +1,233 @@
+[gd_scene load_steps=10 format=3 uid="uid://ble6gn304ldqg"]
+
+[ext_resource type="Script" path="res://脚本/外部工具.gd" id="1_2aeve"]
+[ext_resource type="Texture2D" uid="uid://dxt2ecw7xb8t0" path="res://素材/MaterialSymbolsRemove.png" id="2_v71yg"]
+[ext_resource type="Texture2D" uid="uid://40ucipblc5r4" path="res://素材/MaterialSymbolsAdd.png" id="3_do83u"]
+[ext_resource type="PackedScene" uid="uid://dhq7guhmbml0l" path="res://美化预制体/按钮.tscn" id="4_f1jvv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy50n"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0sff"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bel5l"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23ha8"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxeks"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[node name="外部工具" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.142857
+grow_horizontal = 2
+script = ExtResource("1_2aeve")
+metadata/_edit_use_anchors_ = true
+
+[node name="层数" type="Label" parent="."]
+layout_mode = 1
+offset_left = 120.0
+offset_right = 150.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "层"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="层数编辑" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 10.0
+offset_right = 260.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jy50n")
+
+[node name="文本编辑" type="LineEdit" parent="层数编辑"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/selection_color = Color(1, 1, 1, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+placeholder_text = "0"
+alignment = 1
+max_length = 1
+editable = false
+context_menu_enabled = false
+flat = true
+
+[node name="层数减" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0sff")
+
+[node name="贴图" type="TextureRect" parent="层数减"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v71yg")
+expand_mode = 1
+
+[node name="操作" type="Button" parent="层数减"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="层数加" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0sff")
+
+[node name="贴图" type="TextureRect" parent="层数加"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_do83u")
+expand_mode = 1
+
+[node name="操作" type="Button" parent="层数加"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="容器" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 115.0
+offset_bottom = 50.0
+
+[node name="正视角" parent="容器" instance=ExtResource("4_f1jvv")]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_bel5l")
+
+[node name="文本" type="Label" parent="容器/正视角"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "正"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="侧视角" parent="容器" instance=ExtResource("4_f1jvv")]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_23ha8")
+
+[node name="文本" type="Label" parent="容器/侧视角"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "侧"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="俯视角" parent="容器" instance=ExtResource("4_f1jvv")]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_bxeks")
+
+[node name="文本" type="Label" parent="容器/俯视角"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "俯"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="层数减/操作" to="." method="_on_操作_pressed"]
+[connection signal="pressed" from="层数加/操作" to="." method="_on_操作add_pressed"]
+[connection signal="button_pressed" from="容器/正视角" to="." method="_on_正视角_button_pressed"]
+[connection signal="button_pressed" from="容器/侧视角" to="." method="_on_侧视角_button_pressed"]
+[connection signal="button_pressed" from="容器/俯视角" to="." method="_on_俯视角_button_pressed"]
