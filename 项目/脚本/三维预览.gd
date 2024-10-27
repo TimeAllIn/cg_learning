@@ -30,12 +30,12 @@ func _physics_process(delta: float) -> void:
 		
 			var move_ment = (child_forward * add_ment.x - child_right * add_ment.y)
 			
-			%"摄像机".set_position(%"摄像机".get_position() + move_ment*Data.move_speed * delta)
+			%"摄像机".set_position(%"摄像机".get_position() + move_ment*NewData.move_speed * delta)
 			
 			now_right = get_viewport().get_mouse_position()
 			if now_right != last_right:
 				var rotate_ment = Vector3(last_right.y - now_right.y,last_right.x - now_right.x,0)
-				%"摄像机".set_rotation(%"摄像机".get_rotation() + rotate_ment * Data.rorate_angle * delta * 0.1)
+				%"摄像机".set_rotation(%"摄像机".get_rotation() + rotate_ment * NewData.rorate_angle * delta * 0.1)
 				last_right = now_right
 				
 				pass
