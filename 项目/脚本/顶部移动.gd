@@ -15,5 +15,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		DisplayServer.window_set_position(DisplayServer.mouse_get_position()-v2_mouse)
 
 func _on_关闭_pressed() -> void:
-	get_tree().quit()
+	if multiplayer.multiplayer_peer !=null:
+		NewData.rpc("destory_server")
+	NewData.is_load()
 	pass

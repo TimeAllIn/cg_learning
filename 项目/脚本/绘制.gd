@@ -31,8 +31,7 @@ func _on_按钮_pressed() -> void:
 			NewData.block_list.get(temp_position).make_color(NewData.draw_color)
 			NewData.father_draw()
 			return
-
-		pass
+	
 	
 	pass
 
@@ -49,8 +48,46 @@ func make_block(make_position:Vector3):
 func draw_color(color:Color):
 	$"背景颜色板".set_modulate(color)
 
-
+var mouse_in:bool = false
 func _on_按钮_mouse_entered() -> void:
 	if Input.is_action_pressed("mouse_left"):
+		print("11")
 		_on_按钮_pressed()
+	mouse_in = true
 	pass # Replace with function body.
+
+func fast_right():
+	if NewData.state != 0 or NewData.is_music_ui:
+		return
+	print("22")
+	var temp_position :Vector3= father_node.find_position(id)
+	if NewData.right_state == 1:		
+		if NewData.draw_list.has(temp_position):
+			return
+		NewData.draw_list[temp_position] = NewData.draw_color 
+		make_block(temp_position)
+		NewData.father_draw()
+
+	elif NewData.right_state == 2:
+		if NewData.draw_list.has(temp_position):
+			NewData.draw_list.erase(temp_position)
+			NewData.block_list.get(temp_position).destory()
+			NewData.block_list.erase(temp_position)
+			NewData.father_draw()
+			return
+	elif NewData.right_state == 3:
+		if NewData.draw_list.has(temp_position):
+			NewData.draw_list[temp_position] = NewData.draw_color
+			NewData.block_list.get(temp_position).make_color(NewData.draw_color)
+			NewData.father_draw()
+			return
+
+
+func 按钮离开() -> void:
+	mouse_in = false
+	pass # Replace with function body.
+	
+func _physics_process(delta: float) -> void:
+	if mouse_in and NewData.right_state != 0:
+		if Input.is_action_just_pressed("mouse_right"):
+			fast_right()

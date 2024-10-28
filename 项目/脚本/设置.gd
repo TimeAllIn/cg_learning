@@ -37,7 +37,6 @@ func 背景图导入路径(path: String) -> void:
 	
 	pass
 
-
 func 重置背景图() -> void:
 	var save_file = save_data.new()
 	save_file.back_ground = null

@@ -1,6 +1,8 @@
 extends Control
 func _ready() -> void:
+	
 
+	
 	NewData.state_animation = $"主要按钮指示器/动画"
 	NewData.draw_state_animation = $"工具指示器/动画"
 	NewData.color_animation = $"../颜料选择/颜料动画"

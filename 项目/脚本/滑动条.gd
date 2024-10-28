@@ -23,15 +23,22 @@ var last_mouse:Vector2
 
 signal value_change(to_value:float)
 
+var checkit:bool
+
 func _physics_process(delta: float) -> void:
 	if is_mouse_in or is_mouse:
+		#if Input.is_action_pressed("mouse_left") and  is_mouse:
+			#return
 		if Input.is_action_just_pressed("mouse_right"):
 			$"容器".position.x = max_value * start_value
+			value = start_value
+			emit_signal("value_change",value)		
 		is_mouse = Input.is_action_pressed("mouse_left")
 		if Input.is_action_just_pressed("mouse_left"):
 			last_mouse = get_viewport().get_mouse_position()
 			now_mouse = last_mouse
-		if is_mouse:
+			checkit = true
+		if is_mouse and checkit:
 			now_mouse = get_viewport().get_mouse_position()
 			if last_mouse.x != now_mouse.x:
 				$"容器".position.x += now_mouse.x - last_mouse.x
@@ -39,7 +46,9 @@ func _physics_process(delta: float) -> void:
 			emit_signal("value_change",value)
 		value = $"容器".position.x/max_value
 		math_value()
-		
+	if checkit:
+		if Input.is_action_just_released("mouse_left"):
+			checkit = false
 		pass
 
 func set_value(to_value:float = -10):

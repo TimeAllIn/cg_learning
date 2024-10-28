@@ -110,17 +110,14 @@ func OBJ文件保存(path: String) -> void:
 		
 		var texture = load("res://素材/颜料表.png")
 		var image: Image = texture.get_image()
-		var error = image.save_png(fail_path + ".png")
+		image.save_png(fail_path + ".png")
 		
-	load_path = ""
+
 	pass 
-
-
 
 func 加载() -> void:
 	$"../文件夹相关/存档读取".set_visible(true)
 	pass
-
 
 func 保存() -> void:
 	if NewData.block_list.is_empty():
@@ -128,13 +125,11 @@ func 保存() -> void:
 	$"../文件夹相关/存档加载".set_visible(true)
 	pass
 
-
 func 导出() -> void:
 	if NewData.block_list.is_empty():		
 		return	
 	$"../文件夹相关/文件保存框".set_visible(true)
 	pass
-
 
 func 存档(path: String) -> void:
 	
@@ -146,7 +141,7 @@ func 存档(path: String) -> void:
 	
 	config.set_value("课程设计数据存储","灵敏度",NewData.rorate_angle)
 	config.set_value("课程设计数据存储","移动速度",NewData.move_speed)
-	
+	NewData.load_path = path
 	config.save(path)
 	pass
 
@@ -154,16 +149,24 @@ func 存档(path: String) -> void:
 const block = preload("res://预制体/网格.tscn")
 func 读档(path: String) -> void:
 	var config = ConfigFile.new()
-	config.load(path)
-	NewData.draw_list = config.get_value("课程设计数据存储","颜色信息")
+	if config.load(path) != OK:
+		return
+
+	if not config.has_section("课程设计数据存储"):
+		return
+	if config.has_section_key("课程设计数据存储","颜色信息"):
+		NewData.draw_list = config.get_value("课程设计数据存储","颜色信息")
+		NewData.load_path = path
+	if config.has_section_key("课程设计数据存储","摄像机坐标"):
+		%"摄像机".position = config.get_value("课程设计数据存储","摄像机坐标")
+	if config.has_section_key("课程设计数据存储","摄像机旋转"):
+		%"摄像机".set_rotation(config.get_value("课程设计数据存储","摄像机旋转"))
+	if config.has_section_key("课程设计数据存储","灵敏度"):
+		NewData.rorate_angle = config.get_value("课程设计数据存储","灵敏度")
+	if config.has_section_key("课程设计数据存储","移动速度"):
+		NewData.move_speed = config.get_value("课程设计数据存储","移动速度")
 	
-	%"摄像机".position = config.get_value("课程设计数据存储","摄像机坐标")
-	%"摄像机".set_rotation(config.get_value("课程设计数据存储","摄像机旋转"))
-	
-	NewData.rorate_angle = config.get_value("课程设计数据存储","灵敏度")
-	NewData.move_speed = config.get_value("课程设计数据存储","移动速度")
 	NewData.make_set()
-	
 	NewData.father_draw()
 	NewData.block_list.clear()
 	for i in NewData.block_position.get_children():

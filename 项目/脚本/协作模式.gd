@@ -27,6 +27,9 @@ func change_state(change_num:int):
 @export var no_color:Color
 @export var server_color:Color
 
+func _ready() -> void:
+	NewData.server_icon = self
+
 func 单人模式() -> void:
 	change_state(0)
 	$"标题/个人".set_visible(true)
@@ -76,6 +79,8 @@ func 连接服务器() -> void:
 
 
 func 断开连接() -> void:
+	if NewData.multiplayer.multiplayer_peer != null:
+		NewData.rpc("destory_server")
 	NewData.multiplayer.multiplayer_peer = null
 	$"颜色指示符".set_modulate(no_color)
 	pass # Replace with function body.

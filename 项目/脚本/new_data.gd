@@ -38,6 +38,9 @@ var block_position
 var draw_list = {}
 var block_list = {}
 
+
+var load_path:String
+
 #视图移动速度
 @export var move_speed:float = 10
 #视图旋转速度
@@ -153,25 +156,37 @@ func draw_state_change(to_num:int):
 
 func make_set():
 	setting.start_set()
+	
 
 
 const block = preload("res://预制体/网格.tscn")
+
+var server_icon
 
 @rpc("any_peer","call_remote","unreliable")
 func server_draw(d_s):			
 	draw_list = d_s
 	father_rpcdraw()
-
-
-	block_list.clear()
-	for i in block_position.get_children():
-		i.queue_free()
-		pass
-	for i in draw_list:
-		make_block(i,NewData.draw_list.get(i))
-		pass
-	
+	for x in range(10):
+		for y in range(10):
+			for z in range(10):
+				var new_key = Vector3(x,y,z)
+				if draw_list.has(new_key):
+					if block_list.has(new_key):
+						block_list.get(new_key).make_color(draw_list.get(new_key))
+					else :
+						make_block(new_key,NewData.draw_list.get(new_key))
+				else:
+					if block_list.has(new_key):
+						block_list.get(new_key).destory()
+						block_list.erase(new_key)	
 	pass
+
+@rpc("authority")
+func destory_server():
+	self.multiplayer.multiplayer_peer = null
+	server_icon.断开连接()
+
 
 func make_block(make_position:Vector3,make_color:Color):
 	var temp_block = block.instantiate()
@@ -184,3 +199,31 @@ func make_block(make_position:Vector3,make_color:Color):
 func father_rpcdraw():
 	for i in father_node:
 		i.draw_color()
+
+var close_tip
+func is_load(id:int = 0):
+	close_tip.id = id
+	if draw_list.is_empty():
+		if load_path.is_relative_path():
+			if id == 0:
+				get_tree().quit()
+			elif id == 1:
+				return true
+	else:
+		if load_path.is_relative_path():
+			close_tip.set_visible(true)
+		else :
+			var config = ConfigFile.new()
+			if config.load(load_path) != OK:
+				return
+			if draw_list != config.get_value("课程设计数据存储","颜色信息"):
+				close_tip.set_visible(true)
+			else:
+				if id == 0:
+					get_tree().quit()
+				else:
+					return true
+	return false
+
+#0: 无状态，1铅笔，2橡皮，3涂料
+var right_state:int = 0

@@ -41,4 +41,5 @@ grow_vertical = 2
 flat = true
 
 [connection signal="mouse_entered" from="按钮" to="." method="_on_按钮_mouse_entered"]
+[connection signal="mouse_exited" from="按钮" to="." method="按钮离开"]
 [connection signal="pressed" from="按钮" to="." method="_on_按钮_pressed"]

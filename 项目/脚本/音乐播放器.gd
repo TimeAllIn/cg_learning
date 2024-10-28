@@ -46,18 +46,18 @@ func _physics_process(delta: float) -> void:
 			if Input.is_action_just_released("mouse_left"):
 				move_it = false
 			return	
-		now_time += delta * $"../../文件夹相关/音乐播放器".get_pitch_scale()
+		now_time += delta 
 		var music_length = music.get_length()
-		if now_time >= music_length:
+		if now_time * get_music.get_pitch_scale() >= music_length:
 			get_music.set_stream(null) 
-		$"背景板/流程/滑动条".set_value(now_time/music_length)
+		$"背景板/流程/滑动条".set_value((now_time * get_music.get_pitch_scale())/music_length)
 
 var move_it:bool = false
 func 过程滚动(to_value: float) -> void:
 	if get_music.get_stream() == null:
 		return
 	move_it = true
-	var music_length = get_music.get_stream().get_length()	
+	var music_length = get_music.get_stream().get_length()
 	get_music.seek(music_length * to_value)	
 	now_time = music_length * to_value
 	pass
@@ -70,6 +70,9 @@ func 音量调整(to_value: float) -> void:
 
 
 func 音高调整(to_value: float) -> void:
+	if to_value == 0:
+		get_music.set_pitch_scale(0.01)
+		return
 	get_music.set_pitch_scale(2 * to_value)
 	pass # Replace with function body.
 

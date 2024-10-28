@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://cvehsw4k52uag"]
+[gd_scene load_steps=145 format=3 uid="uid://cvehsw4k52uag"]
 
 [ext_resource type="Script" path="res://脚本/功能集合.gd" id="1_dpilk"]
 [ext_resource type="PackedScene" uid="uid://dhq7guhmbml0l" path="res://美化预制体/按钮.tscn" id="1_qasb1"]
@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://cny7t8jxgqxhg" path="res://素材/美化素材/方块Apache_2.0.png" id="25_swxwx"]
 [ext_resource type="Script" path="res://脚本/后加载.gd" id="29_128x7"]
 [ext_resource type="Script" path="res://脚本/协作模式.gd" id="30_53xuy"]
+[ext_resource type="Script" path="res://脚本/右键快捷设置.gd" id="31_h5lly"]
+[ext_resource type="Script" path="res://脚本/提示.gd" id="32_guw8f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eujql"]
 bg_color = Color(1, 1, 1, 1)
@@ -1773,6 +1775,213 @@ corner_radius_bottom_left = 40
 corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4mq4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8oe4"]
+bg_color = Color(0.571875, 0.571875, 0.571875, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akmn6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Animation" id="Animation_h2663"]
+resource_name = "不启用到铅笔"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(81, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g13s1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g31e8"]
+resource_name = "不启用到橡皮"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(162, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wrj5o"]
+resource_name = "不启用到涂料"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(245, 0), Vector2(245, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sw1bi"]
+resource_name = "铅笔到橡皮"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(81, 0), Vector2(162, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ncmi4"]
+resource_name = "铅笔到涂料"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(81, 0), Vector2(245, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vjk4y"]
+resource_name = "橡皮到涂料"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(162, 0), Vector2(245, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxh7a"]
+_data = {
+"RESET": SubResource("Animation_g13s1"),
+"不启用到橡皮": SubResource("Animation_g31e8"),
+"不启用到涂料": SubResource("Animation_wrj5o"),
+"不启用到铅笔": SubResource("Animation_h2663"),
+"橡皮到涂料": SubResource("Animation_vjk4y"),
+"铅笔到橡皮": SubResource("Animation_sw1bi"),
+"铅笔到涂料": SubResource("Animation_ncmi4")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o77p"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otrlo"]
+resource_local_to_scene = true
+bg_color = Color(0.496875, 0.679258, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agavw"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mc8xx"]
+resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
 border_width_top = 1
@@ -4835,9 +5044,10 @@ offset_left = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "鼠标中键"
+text = "鼠标右键"
 horizontal_alignment = 1
 vertical_alignment = 1
+language = "cmn_CN"
 
 [node name="快捷键18" type="Panel" parent="设置/快捷键/滚动容器/容器"]
 clip_children = 2
@@ -5779,6 +5989,141 @@ anchor_bottom = 0.117647
 theme_override_styles/panel = SubResource("StyleBoxFlat_b4mq4")
 metadata/_edit_use_anchors_ = true
 
+[node name="右键快捷设置" type="Panel" parent="设置"]
+layout_mode = 0
+anchor_left = 0.0147059
+anchor_top = 0.597222
+anchor_right = 0.494118
+anchor_bottom = 0.652778
+theme_override_styles/panel = SubResource("StyleBoxFlat_q8oe4")
+script = ExtResource("31_h5lly")
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="设置/右键快捷设置"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.012
+anchor_top = -0.8
+anchor_right = 1.01227
+anchor_bottom = -0.008
+offset_left = -339.912
+offset_bottom = 0.32
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "右键快捷设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="指示器" type="Panel" parent="设置/右键快捷设置"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.248466
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_akmn6")
+metadata/_edit_use_anchors_ = true
+
+[node name="按钮合集" type="Control" parent="设置/右键快捷设置"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="不启用" type="Button" parent="设置/右键快捷设置/按钮合集"]
+clip_contents = true
+layout_mode = 0
+anchor_right = 0.248466
+anchor_bottom = 1.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="设置/右键快捷设置/按钮合集/不启用"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "不启用"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="铅笔" type="Button" parent="设置/右键快捷设置/按钮合集"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.248466
+anchor_right = 0.496933
+anchor_bottom = 1.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="设置/右键快捷设置/按钮合集/铅笔"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "铅笔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="橡皮" type="Button" parent="设置/右键快捷设置/按钮合集"]
+clip_contents = true
+layout_mode = 0
+anchor_left = 0.496933
+anchor_right = 0.745399
+anchor_bottom = 1.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="设置/右键快捷设置/按钮合集/橡皮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "橡皮"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="涂料" type="Button" parent="设置/右键快捷设置/按钮合集"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.745399
+anchor_right = 1.0
+anchor_bottom = 1.0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="设置/右键快捷设置/按钮合集/涂料"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "涂料
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="动画播放器" type="AnimationPlayer" parent="设置/右键快捷设置"]
+libraries = {
+"": SubResource("AnimationLibrary_pxh7a")
+}
+
 [node name="文件夹相关" type="Node" parent="."]
 
 [node name="文件保存框" type="FileDialog" parent="文件夹相关"]
@@ -5810,13 +6155,14 @@ use_native_dialog = true
 [node name="存档读取" type="FileDialog" parent="文件夹相关"]
 auto_translate_mode = 1
 gui_disable_input = true
-title = "Open a File"
+title = "打开文件"
 initial_position = 2
 size = Vector2i(352, 211)
 force_native = true
 ok_button_text = "Open"
 dialog_hide_on_ok = true
 dialog_close_on_escape = false
+mode_overrides_title = false
 file_mode = 0
 access = 2
 filters = PackedStringArray("*.cgLearn,*.cgGame")
@@ -5825,13 +6171,14 @@ use_native_dialog = true
 [node name="背景图导入" type="FileDialog" parent="文件夹相关"]
 auto_translate_mode = 1
 gui_disable_input = true
-title = "Open a File"
+title = "选择图片"
 initial_position = 2
 size = Vector2i(352, 211)
 force_native = true
 ok_button_text = "Open"
 dialog_hide_on_ok = true
 dialog_close_on_escape = false
+mode_overrides_title = false
 file_mode = 0
 access = 2
 filters = PackedStringArray("*.png,*.jpg,*.jpeg")
@@ -5840,13 +6187,14 @@ use_native_dialog = true
 [node name="音乐导入" type="FileDialog" parent="文件夹相关"]
 auto_translate_mode = 1
 gui_disable_input = true
-title = "Open a File"
+title = "选择音乐"
 initial_position = 2
 size = Vector2i(352, 211)
 force_native = true
 ok_button_text = "Open"
 dialog_hide_on_ok = true
 dialog_close_on_escape = false
+mode_overrides_title = false
 file_mode = 0
 access = 2
 filters = PackedStringArray("*.mp3")
@@ -5857,6 +6205,114 @@ volume_db = -18.0
 
 [node name="后加载" type="Node" parent="."]
 script = ExtResource("29_128x7")
+
+[node name="关闭提示" type="Control" parent="后加载"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("32_guw8f")
+metadata/_edit_use_anchors_ = true
+
+[node name="提示" type="Panel" parent="后加载/关闭提示"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333333
+anchor_top = 0.375
+anchor_right = 0.666667
+anchor_bottom = 0.625
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2o77p")
+metadata/_edit_use_anchors_ = true
+
+[node name="文本" type="Label" parent="后加载/关闭提示/提示"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 0.18
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "提示"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="文本2" type="Label" parent="后加载/关闭提示/提示"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.58
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "检测到有未保存的数据，是否保存文件"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="保存" parent="后加载/关闭提示/提示" instance=ExtResource("1_qasb1")]
+layout_mode = 1
+anchor_left = 0.075
+anchor_top = 0.765
+anchor_right = 0.33
+anchor_bottom = 0.965
+grow_horizontal = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_otrlo")
+
+[node name="文本" type="Label" parent="后加载/关闭提示/提示/保存"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "保存"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="取消" parent="后加载/关闭提示/提示" instance=ExtResource("1_qasb1")]
+layout_mode = 1
+anchor_left = 0.675
+anchor_top = 0.765
+anchor_right = 0.93
+anchor_bottom = 0.965
+grow_horizontal = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_agavw")
+
+[node name="文本" type="Label" parent="后加载/关闭提示/提示/取消"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="退出" parent="后加载/关闭提示/提示" instance=ExtResource("1_qasb1")]
+layout_mode = 1
+anchor_left = 0.375
+anchor_top = 0.765
+anchor_right = 0.63
+anchor_bottom = 0.965
+grow_horizontal = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_mc8xx")
+
+[node name="文本" type="Label" parent="后加载/关闭提示/提示/退出"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "不保存"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="功能集合/图标/纹理" to="功能集合/图标" method="鼠标进入"]
 [connection signal="mouse_exited" from="功能集合/图标/纹理" to="功能集合/图标" method="鼠标离开"]
@@ -5902,12 +6358,19 @@ script = ExtResource("29_128x7")
 [connection signal="button_pressed" from="设置/协作模式/标题/个人/按钮" to="设置/协作模式" method="断开连接"]
 [connection signal="button_pressed" from="设置/协作模式/标题/服务端/按钮" to="设置/协作模式" method="开启服务器"]
 [connection signal="button_pressed" from="设置/协作模式/标题/客户端/按钮" to="设置/协作模式" method="连接服务器"]
+[connection signal="pressed" from="设置/右键快捷设置/按钮合集/不启用" to="设置/右键快捷设置" method="不启用"]
+[connection signal="pressed" from="设置/右键快捷设置/按钮合集/铅笔" to="设置/右键快捷设置" method="铅笔"]
+[connection signal="pressed" from="设置/右键快捷设置/按钮合集/橡皮" to="设置/右键快捷设置" method="橡皮"]
+[connection signal="pressed" from="设置/右键快捷设置/按钮合集/涂料" to="设置/右键快捷设置" method="涂料"]
 [connection signal="file_selected" from="文件夹相关/文件保存框" to="导出" method="OBJ文件保存"]
 [connection signal="file_selected" from="文件夹相关/存档加载" to="导出" method="存档"]
 [connection signal="file_selected" from="文件夹相关/存档读取" to="导出" method="读档"]
 [connection signal="file_selected" from="文件夹相关/背景图导入" to="设置" method="背景图导入路径"]
 [connection signal="file_selected" from="文件夹相关/音乐导入" to="功能界面/音乐播放器" method="音乐导入"]
 [connection signal="finished" from="文件夹相关/音乐播放器" to="功能界面/音乐播放器" method="音乐完毕"]
+[connection signal="button_pressed" from="后加载/关闭提示/提示/保存" to="后加载/关闭提示" method="确认保存"]
+[connection signal="button_pressed" from="后加载/关闭提示/提示/取消" to="后加载/关闭提示" method="确认取消"]
+[connection signal="button_pressed" from="后加载/关闭提示/提示/退出" to="后加载/关闭提示" method="确认退出"]
 
 [editable path="功能集合/主要按钮集合/项目"]
 [editable path="功能集合/主要按钮集合/设置"]
@@ -5930,3 +6393,6 @@ script = ExtResource("29_128x7")
 [editable path="导出/背景板/导出"]
 [editable path="设置/灵敏度调整/滑动条"]
 [editable path="设置/速度调整/滑动条"]
+[editable path="后加载/关闭提示/提示/保存"]
+[editable path="后加载/关闭提示/提示/取消"]
+[editable path="后加载/关闭提示/提示/退出"]
