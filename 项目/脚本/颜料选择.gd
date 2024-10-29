@@ -1,18 +1,25 @@
 extends "res://脚本/按钮.gd"
 
 var to_color
-@export var id:String
+
+@export var id:int
+@export var color_vector:Vector2 = Vector2(0,0)
 
 func _ready() -> void:
+	id = int(str(name))
 	to_color = get_modulate()
-func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("ctrl") or NewData.state != 0:
-		return
-	if Input.is_action_just_released(id):
-		NewData.draw_color = to_color
-		NewData.color_show.set_modulate(NewData.draw_color)
+
 func 按钮按下() -> void:
 	NewData.draw_color = to_color
 	NewData.color_show.set_modulate(NewData.draw_color)
-	NewData.draw_state_change(NewData.last_state)
+	$"../..".chose_id = id
+	
+	$"../../../调色板/主体/H/滑动条".set_value(color_vector.x/255)
+	$"../../../调色板/黑白/H/滑动条".set_value(color_vector.y/255)
+	
+	$"../../../调色板/主体".make_text(color_vector.x)
+	$"../../../调色板/黑白".make_text(color_vector.y)
+	
+	$"../../../调色板/显示颜色".set_modulate(to_color)
+	#NewData.draw_state_change(NewData.last_state)
 	pass

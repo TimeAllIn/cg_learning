@@ -77,6 +77,8 @@ func state_change(to_num:int):
 	if is_music_ui:
 		music_animation.play_backwards("音乐")
 		is_music_ui = false
+	if draw_state == 3:
+		draw_state_change(last_state)
 	if to_num == 0:
 		#动画调整	
 		if state == 1:

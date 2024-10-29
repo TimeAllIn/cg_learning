@@ -1,34 +1,37 @@
-[gd_scene load_steps=145 format=3 uid="uid://s7psbyog34d7"]
+[gd_scene load_steps=251 format=3 uid="uid://s7psbyog34d7"]
 
 [ext_resource type="Script" path="res://脚本/功能集合.gd" id="1_dpilk"]
-[ext_resource type="PackedScene" path="res://美化预制体/按钮.tscn" id="1_qasb1"]
+[ext_resource type="PackedScene" uid="uid://dhq7guhmbml0l" path="res://美化预制体/按钮.tscn" id="1_qasb1"]
 [ext_resource type="Script" path="res://脚本/顶部移动.gd" id="1_qyogm"]
 [ext_resource type="Script" path="res://脚本/图标.gd" id="2_dcaxp"]
-[ext_resource type="Texture2D" path="res://素材/建模Apaache_2.0.png" id="2_pwo1q"]
+[ext_resource type="Texture2D" uid="uid://ceqqnvxwp6vxx" path="res://素材/建模Apaache_2.0.png" id="2_pwo1q"]
 [ext_resource type="Script" path="res://脚本/父节点.gd" id="3_uv50b"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/工作台Apache_2.0.png" id="4_2hulw"]
+[ext_resource type="Texture2D" uid="uid://bdohtkj708g8r" path="res://素材/美化素材/工作台Apache_2.0.png" id="4_2hulw"]
 [ext_resource type="Script" path="res://脚本/颜料选择.gd" id="4_3m261"]
 [ext_resource type="Script" path="res://脚本/重置摄像机按钮.gd" id="4_5tcfs"]
-[ext_resource type="PackedScene" path="res://预制体/0.tscn" id="4_6iskt"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/齿轮Apache_2.0.png" id="5_atqw4"]
-[ext_resource type="PackedScene" path="res://预制体/外部工具.tscn" id="5_fa6la"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/导出Mit.png" id="6_hrhpr"]
+[ext_resource type="PackedScene" uid="uid://cehh1y6wc4ptq" path="res://预制体/0.tscn" id="4_6iskt"]
+[ext_resource type="Texture2D" uid="uid://bnpa52x52a8h6" path="res://素材/美化素材/齿轮Apache_2.0.png" id="5_atqw4"]
+[ext_resource type="PackedScene" uid="uid://bex30ey2xaiog" path="res://预制体/外部工具.tscn" id="5_fa6la"]
+[ext_resource type="Texture2D" uid="uid://cpso02dpe21k4" path="res://素材/美化素材/导出Mit.png" id="6_hrhpr"]
 [ext_resource type="Script" path="res://脚本/重置全局.gd" id="6_xeu2k"]
 [ext_resource type="Script" path="res://脚本/三维预览.gd" id="7_0gpfr"]
-[ext_resource type="PackedScene" path="res://美化预制体/外部工具.tscn" id="7_5huab"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/铅笔MIT.png" id="7_ea5lf"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/橡皮CCBY4.0.png" id="8_lmv32"]
+[ext_resource type="PackedScene" uid="uid://ble6gn304ldqg" path="res://美化预制体/外部工具.tscn" id="7_5huab"]
+[ext_resource type="Texture2D" uid="uid://b46j8jlln1usr" path="res://素材/美化素材/铅笔MIT.png" id="7_ea5lf"]
+[ext_resource type="Texture2D" uid="uid://bnaddpv8hatue" path="res://素材/美化素材/橡皮CCBY4.0.png" id="8_lmv32"]
 [ext_resource type="Script" path="res://脚本/音乐播放器.gd" id="9_0kcx5"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/刷子Apache_2.0.png" id="9_2bv3i"]
+[ext_resource type="Texture2D" uid="uid://bsappbujtxqw4" path="res://素材/美化素材/刷子Apache_2.0.png" id="9_2bv3i"]
 [ext_resource type="Script" path="res://脚本/导出全代码.gd" id="10_s3t8c"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/摄像机MIT.png" id="11_kqiio"]
+[ext_resource type="Texture2D" uid="uid://dwomlefusb5b4" path="res://素材/美化素材/摄像机MIT.png" id="11_kqiio"]
 [ext_resource type="Script" path="res://脚本/设置.gd" id="12_8fwpo"]
-[ext_resource type="PackedScene" path="res://美化预制体/滑动条.tscn" id="12_hodbm"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/垃圾桶MIT.png" id="13_dvqwd"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/暂停.png" id="20_i0fij"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/导入MIT.png" id="23_oqq5d"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/保存Apache_2.0.png" id="24_dhnve"]
-[ext_resource type="Texture2D" path="res://素材/美化素材/方块Apache_2.0.png" id="25_swxwx"]
+[ext_resource type="PackedScene" uid="uid://bok0psi6ay1cv" path="res://美化预制体/滑动条.tscn" id="12_hodbm"]
+[ext_resource type="Texture2D" uid="uid://pkgevaogcl53" path="res://素材/美化素材/垃圾桶MIT.png" id="13_dvqwd"]
+[ext_resource type="Texture2D" uid="uid://cnrileb0eqf61" path="res://素材/美化素材/暂停.png" id="20_i0fij"]
+[ext_resource type="Script" path="res://脚本/颜料板.gd" id="23_71l2h"]
+[ext_resource type="Texture2D" uid="uid://c2yx3600gtf5m" path="res://素材/美化素材/导入MIT.png" id="23_oqq5d"]
+[ext_resource type="Texture2D" uid="uid://dmm1dy1q3gdmm" path="res://素材/美化素材/保存Apache_2.0.png" id="24_dhnve"]
+[ext_resource type="PackedScene" uid="uid://du2elvl6wprun" path="res://美化预制体/颜色主体.tscn" id="25_3s0rl"]
+[ext_resource type="Texture2D" uid="uid://cny7t8jxgqxhg" path="res://素材/美化素材/方块Apache_2.0.png" id="25_swxwx"]
+[ext_resource type="Script" path="res://脚本/颜色二次.gd" id="26_130rn"]
 [ext_resource type="Script" path="res://脚本/后加载.gd" id="29_128x7"]
 [ext_resource type="Script" path="res://脚本/协作模式.gd" id="30_53xuy"]
 [ext_resource type="Script" path="res://脚本/右键快捷设置.gd" id="31_h5lly"]
@@ -558,309 +561,93 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 corner_detail = 20
 
-[sub_resource type="Animation" id="Animation_eingj"]
+[sub_resource type="Animation" id="Animation_6ly5n"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 50)]
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath(".:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(700, 720)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("0:visible")
+tracks/2/path = NodePath("颜料板:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("1:visible")
+tracks/3/path = NodePath("调色板:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("2:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("3:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("4:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("5:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("6:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("7:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("8:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("9:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("0:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(20, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("1:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(80, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("2:position")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(140, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("3:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(200, 0)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("4:position")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(260, 0)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("5:position")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(320, 0)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("6:position")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(380, 0)]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("7:position")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(440, 0)]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("8:position")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(500, 0)]
-}
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("9:position")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(560, 0)]
+"values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_klj6a"]
+[sub_resource type="Animation" id="Animation_nmi4m"]
 resource_name = "颜料开启"
 length = 0.1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 50), Vector2(630, 50)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.01),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 720), Vector2(700, 720)]
+}
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("0:visible")
+tracks/2/path = NodePath("颜料板:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1),
+"times": PackedFloat32Array(0.06, 0.08),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -868,237 +655,34 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("1:visible")
+tracks/3/path = NodePath("调色板:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.09),
+"times": PackedFloat32Array(0.06, 0.08),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("2:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.08),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("3:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.07),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("4:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.06),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("5:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("6:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.04),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("7:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.03),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("8:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.02),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("9:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.01),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("0:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(20, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("1:position")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0.09, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(80, 0)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("2:position")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0.08, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(140, 0)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("3:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0.07, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(200, 0)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("4:position")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0.06, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(260, 0)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("5:position")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(320, 0)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("6:position")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0.04, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(380, 0)]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("7:position")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(0.03, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(440, 0)]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("8:position")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(0.02, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(20, 0), Vector2(500, 0)]
-}
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("9:position")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
-"times": PackedFloat32Array(0.01, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(10, 0), Vector2(560, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bs8mv"]
 _data = {
-"RESET": SubResource("Animation_eingj"),
-"颜料开启": SubResource("Animation_klj6a")
+"RESET": SubResource("Animation_6ly5n"),
+"颜料开启": SubResource("Animation_nmi4m")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lddsg"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vkmn"]
 resource_local_to_scene = true
@@ -1113,7 +697,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyyeg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80qqw"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1126,7 +710,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kffpj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpyx5"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1139,7 +723,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kmc1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1a1p"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1152,7 +736,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewwey"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3vu5"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1165,7 +749,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8orf3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipltm"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1178,7 +762,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2sla"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og7rh"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1191,7 +775,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjn4s"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sld50"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1204,7 +788,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4svu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oc2b8"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1217,7 +801,7 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2yqs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyb6f"]
 resource_local_to_scene = true
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -1229,6 +813,1310 @@ corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apq4f"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir8g4"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7nqbg"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxqf8"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ads0o"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtwa8"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbx7t"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eeb6e"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sspwk"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64pr5"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hlyo"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rm8sl"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5p3j"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v75bu"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4detj"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44dmw"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d51oh"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wib4s"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byv3k"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdqed"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2aoh"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi5iu"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8teua"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbmt8"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xqwc"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q86kc"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0l2q"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gym7j"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xr20"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5l2p"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qq408"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qow1y"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1f6w"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6g6g"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulr0i"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ah0q"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snncc"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpcb3"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8yj0"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60pk3"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ddpg"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abv05"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_to122"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipdci"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_buigf"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w324w"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jh1b1"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yv4ee"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p51tu"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o747k"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ff2jo"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b41mx"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c72f6"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42u8u"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56jsk"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipmf2"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fibcs"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d83l6"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oswmd"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72fiu"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrnup"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba117"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47t4a"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cljs5"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7vfy"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e4ya"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63yq6"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wiljb"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcxjm"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4hjw"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdgfj"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwesj"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ayqf"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhofd"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6k3u7"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4bnt"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xrno"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejexk"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suucg"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hedfi"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab3ve"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2afe4"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlbj7"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2vra"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uhti"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_250vk"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pcp3"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl16r"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pi4d"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl7wk"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ccd0"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnrxm"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_224nk"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qbt3"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w76m"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2eao"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gffx"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok2re"]
+resource_local_to_scene = true
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ktvi"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="Gradient" id="Gradient_l1shg"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.5, 0.5, 0.5, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 2
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_spcwb"]
+gradient = SubResource("Gradient_l1shg")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyxrg"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0krt"]
 bg_color = Color(1, 1, 1, 1)
@@ -1811,23 +2699,6 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="Animation" id="Animation_h2663"]
-resource_name = "不启用到铅笔"
-length = 0.1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("指示器:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(81, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_g13s1"]
 length = 0.001
 tracks/0/type = "value"
@@ -1877,6 +2748,40 @@ tracks/0/keys = {
 "values": [Vector2(245, 0), Vector2(245, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_h2663"]
+resource_name = "不启用到铅笔"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(81, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vjk4y"]
+resource_name = "橡皮到涂料"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("指示器:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(162, 0), Vector2(245, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_sw1bi"]
 resource_name = "铅笔到橡皮"
 length = 0.1
@@ -1909,23 +2814,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(81, 0), Vector2(245, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_vjk4y"]
-resource_name = "橡皮到涂料"
-length = 0.1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("指示器:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(162, 0), Vector2(245, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pxh7a"]
@@ -4333,10 +5221,11 @@ libraries = {
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.075
-anchor_top = 0.8
-anchor_right = 0.075
-anchor_bottom = 0.85
+anchor_left = 0.1
+anchor_top = 0.075
+anchor_right = 0.68
+anchor_bottom = 0.9625
+offset_right = 4.0
 offset_bottom = 10.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ckk8w")
@@ -4347,170 +5236,1270 @@ libraries = {
 "": SubResource("AnimationLibrary_bs8mv")
 }
 
-[node name="0" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(0, 0, 0, 1)
+[node name="颜料板" type="Panel" parent="颜料选择"]
 layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_right = 70.0
-grow_horizontal = 0
-grow_vertical = 2
+anchors_preset = -1
+anchor_left = 0.0142857
+anchor_top = 0.0166667
+anchor_right = 0.982857
+anchor_bottom = 0.738889
+theme_override_styles/panel = SubResource("StyleBoxFlat_lddsg")
+script = ExtResource("23_71l2h")
+metadata/_edit_use_anchors_ = true
+
+[node name="容器" type="GridContainer" parent="颜料选择/颜料板"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020649
+anchor_top = 0.0288462
+anchor_right = 0.973451
+anchor_bottom = 0.971154
+theme_override_constants/v_separation = 5
+columns = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="0" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8vkmn")
 script = ExtResource("4_3m261")
-id = "1"
+id = 0
+color_vector = Vector2(0, 255)
 
-[node name="按钮" parent="颜料选择/0" index="1"]
+[node name="按钮" parent="颜料选择/颜料板/容器/0" index="1"]
 shortcut_in_tooltip = false
 
-[node name="1" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 80.0
-offset_right = 130.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_yyyeg")
+[node name="1" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80qqw")
 script = ExtResource("4_3m261")
-id = "2"
+id = 0
+color_vector = Vector2(0, 0)
 
-[node name="按钮" parent="颜料选择/1" index="1"]
+[node name="按钮" parent="颜料选择/颜料板/容器/1" index="1"]
 shortcut_in_tooltip = false
 
-[node name="2" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(1, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 140.0
-offset_right = 190.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kffpj")
+[node name="2" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bpyx5")
 script = ExtResource("4_3m261")
-id = "3"
+id = 0
+color_vector = Vector2(0, 0)
 
-[node name="3" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(0, 0.2875, 1, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 200.0
-offset_right = 250.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4kmc1")
-script = ExtResource("4_3m261")
-id = "4"
+[node name="按钮" parent="颜料选择/颜料板/容器/2" index="1"]
+shortcut_in_tooltip = false
 
-[node name="4" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(1, 0.6, 0, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 260.0
-offset_right = 310.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ewwey")
+[node name="3" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o1a1p")
 script = ExtResource("4_3m261")
-id = "5"
+id = 0
+color_vector = Vector2(0, 0)
 
-[node name="5" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(0, 1, 0.175, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 320.0
-offset_right = 370.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8orf3")
-script = ExtResource("4_3m261")
-id = "6"
+[node name="按钮" parent="颜料选择/颜料板/容器/3" index="1"]
+shortcut_in_tooltip = false
 
-[node name="6" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(1, 0, 0.95625, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 380.0
-offset_right = 430.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_n2sla")
+[node name="4" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h3vu5")
 script = ExtResource("4_3m261")
-id = "7"
+id = 0
+color_vector = Vector2(0, 0)
 
-[node name="7" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(1, 0.9375, 0, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 440.0
-offset_right = 490.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pjn4s")
-script = ExtResource("4_3m261")
-id = "8"
+[node name="按钮" parent="颜料选择/颜料板/容器/4" index="1"]
+shortcut_in_tooltip = false
 
-[node name="8" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(0, 0.64375, 1, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 500.0
-offset_right = 550.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_k4svu")
+[node name="5" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ipltm")
 script = ExtResource("4_3m261")
-id = "9"
+id = 0
+color_vector = Vector2(0, 0)
 
-[node name="9" parent="颜料选择" instance=ExtResource("1_qasb1")]
-visible = false
-modulate = Color(0.6125, 0, 1, 1)
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 560.0
-offset_right = 610.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_j2yqs")
+[node name="按钮" parent="颜料选择/颜料板/容器/5" index="1"]
+shortcut_in_tooltip = false
+
+[node name="6" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_og7rh")
 script = ExtResource("4_3m261")
-id = "0"
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/6" index="1"]
+shortcut_in_tooltip = false
+
+[node name="7" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sld50")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/7" index="1"]
+shortcut_in_tooltip = false
+
+[node name="8" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oc2b8")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/8" index="1"]
+shortcut_in_tooltip = false
+
+[node name="9" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vyb6f")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/9" index="1"]
+shortcut_in_tooltip = false
+
+[node name="10" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_apq4f")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/10" index="1"]
+shortcut_in_tooltip = false
+
+[node name="11" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ir8g4")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/11" index="1"]
+shortcut_in_tooltip = false
+
+[node name="12" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7nqbg")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/12" index="1"]
+shortcut_in_tooltip = false
+
+[node name="13" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jxqf8")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/13" index="1"]
+shortcut_in_tooltip = false
+
+[node name="14" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ads0o")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/14" index="1"]
+shortcut_in_tooltip = false
+
+[node name="15" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtwa8")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/15" index="1"]
+shortcut_in_tooltip = false
+
+[node name="16" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nbx7t")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/16" index="1"]
+shortcut_in_tooltip = false
+
+[node name="17" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eeb6e")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/17" index="1"]
+shortcut_in_tooltip = false
+
+[node name="18" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sspwk")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/18" index="1"]
+shortcut_in_tooltip = false
+
+[node name="19" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_64pr5")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/19" index="1"]
+shortcut_in_tooltip = false
+
+[node name="20" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7hlyo")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/20" index="1"]
+shortcut_in_tooltip = false
+
+[node name="21" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rm8sl")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/21" index="1"]
+shortcut_in_tooltip = false
+
+[node name="22" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l5p3j")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/22" index="1"]
+shortcut_in_tooltip = false
+
+[node name="23" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v75bu")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/23" index="1"]
+shortcut_in_tooltip = false
+
+[node name="24" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4detj")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/24" index="1"]
+shortcut_in_tooltip = false
+
+[node name="25" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_44dmw")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/25" index="1"]
+shortcut_in_tooltip = false
+
+[node name="26" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d51oh")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/26" index="1"]
+shortcut_in_tooltip = false
+
+[node name="27" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wib4s")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/27" index="1"]
+shortcut_in_tooltip = false
+
+[node name="28" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byv3k")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/28" index="1"]
+shortcut_in_tooltip = false
+
+[node name="29" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pdqed")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/29" index="1"]
+shortcut_in_tooltip = false
+
+[node name="30" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b2aoh")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/30" index="1"]
+shortcut_in_tooltip = false
+
+[node name="31" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fi5iu")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/31" index="1"]
+shortcut_in_tooltip = false
+
+[node name="32" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8teua")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/32" index="1"]
+shortcut_in_tooltip = false
+
+[node name="33" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qbmt8")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/33" index="1"]
+shortcut_in_tooltip = false
+
+[node name="34" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xqwc")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/34" index="1"]
+shortcut_in_tooltip = false
+
+[node name="35" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q86kc")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/35" index="1"]
+shortcut_in_tooltip = false
+
+[node name="36" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r0l2q")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/36" index="1"]
+shortcut_in_tooltip = false
+
+[node name="37" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gym7j")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/37" index="1"]
+shortcut_in_tooltip = false
+
+[node name="38" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xr20")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/38" index="1"]
+shortcut_in_tooltip = false
+
+[node name="39" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5l2p")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/39" index="1"]
+shortcut_in_tooltip = false
+
+[node name="40" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qq408")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/40" index="1"]
+shortcut_in_tooltip = false
+
+[node name="41" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qow1y")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/41" index="1"]
+shortcut_in_tooltip = false
+
+[node name="42" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v1f6w")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/42" index="1"]
+shortcut_in_tooltip = false
+
+[node name="43" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c6g6g")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/43" index="1"]
+shortcut_in_tooltip = false
+
+[node name="44" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ulr0i")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/44" index="1"]
+shortcut_in_tooltip = false
+
+[node name="45" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ah0q")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/45" index="1"]
+shortcut_in_tooltip = false
+
+[node name="46" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snncc")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/46" index="1"]
+shortcut_in_tooltip = false
+
+[node name="47" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vpcb3")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/47" index="1"]
+shortcut_in_tooltip = false
+
+[node name="48" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h8yj0")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/48" index="1"]
+shortcut_in_tooltip = false
+
+[node name="49" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_60pk3")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/49" index="1"]
+shortcut_in_tooltip = false
+
+[node name="50" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ddpg")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/50" index="1"]
+shortcut_in_tooltip = false
+
+[node name="51" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_abv05")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/51" index="1"]
+shortcut_in_tooltip = false
+
+[node name="52" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_to122")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/52" index="1"]
+shortcut_in_tooltip = false
+
+[node name="53" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ipdci")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/53" index="1"]
+shortcut_in_tooltip = false
+
+[node name="54" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_buigf")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/54" index="1"]
+shortcut_in_tooltip = false
+
+[node name="55" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w324w")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/55" index="1"]
+shortcut_in_tooltip = false
+
+[node name="56" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jh1b1")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/56" index="1"]
+shortcut_in_tooltip = false
+
+[node name="57" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yv4ee")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/57" index="1"]
+shortcut_in_tooltip = false
+
+[node name="58" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p51tu")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/58" index="1"]
+shortcut_in_tooltip = false
+
+[node name="59" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o747k")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/59" index="1"]
+shortcut_in_tooltip = false
+
+[node name="60" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ff2jo")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/60" index="1"]
+shortcut_in_tooltip = false
+
+[node name="61" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b41mx")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/61" index="1"]
+shortcut_in_tooltip = false
+
+[node name="62" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c72f6")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/62" index="1"]
+shortcut_in_tooltip = false
+
+[node name="63" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_42u8u")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/63" index="1"]
+shortcut_in_tooltip = false
+
+[node name="64" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_56jsk")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/64" index="1"]
+shortcut_in_tooltip = false
+
+[node name="65" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ipmf2")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/65" index="1"]
+shortcut_in_tooltip = false
+
+[node name="66" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fibcs")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/66" index="1"]
+shortcut_in_tooltip = false
+
+[node name="67" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d83l6")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/67" index="1"]
+shortcut_in_tooltip = false
+
+[node name="68" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oswmd")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/68" index="1"]
+shortcut_in_tooltip = false
+
+[node name="69" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_72fiu")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/69" index="1"]
+shortcut_in_tooltip = false
+
+[node name="70" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yrnup")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/70" index="1"]
+shortcut_in_tooltip = false
+
+[node name="71" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ba117")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/71" index="1"]
+shortcut_in_tooltip = false
+
+[node name="72" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_47t4a")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/72" index="1"]
+shortcut_in_tooltip = false
+
+[node name="73" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cljs5")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/73" index="1"]
+shortcut_in_tooltip = false
+
+[node name="74" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n7vfy")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/74" index="1"]
+shortcut_in_tooltip = false
+
+[node name="75" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2e4ya")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/75" index="1"]
+shortcut_in_tooltip = false
+
+[node name="76" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_63yq6")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/76" index="1"]
+shortcut_in_tooltip = false
+
+[node name="77" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wiljb")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/77" index="1"]
+shortcut_in_tooltip = false
+
+[node name="78" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pcxjm")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/78" index="1"]
+shortcut_in_tooltip = false
+
+[node name="79" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4hjw")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/79" index="1"]
+shortcut_in_tooltip = false
+
+[node name="80" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tdgfj")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/80" index="1"]
+shortcut_in_tooltip = false
+
+[node name="81" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xwesj")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/81" index="1"]
+shortcut_in_tooltip = false
+
+[node name="82" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ayqf")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/82" index="1"]
+shortcut_in_tooltip = false
+
+[node name="83" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mhofd")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/83" index="1"]
+shortcut_in_tooltip = false
+
+[node name="84" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6k3u7")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/84" index="1"]
+shortcut_in_tooltip = false
+
+[node name="85" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e4bnt")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/85" index="1"]
+shortcut_in_tooltip = false
+
+[node name="86" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4xrno")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/86" index="1"]
+shortcut_in_tooltip = false
+
+[node name="87" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ejexk")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/87" index="1"]
+shortcut_in_tooltip = false
+
+[node name="88" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_suucg")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/88" index="1"]
+shortcut_in_tooltip = false
+
+[node name="89" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hedfi")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/89" index="1"]
+shortcut_in_tooltip = false
+
+[node name="90" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ab3ve")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/90" index="1"]
+shortcut_in_tooltip = false
+
+[node name="91" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2afe4")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/91" index="1"]
+shortcut_in_tooltip = false
+
+[node name="92" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rlbj7")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/92" index="1"]
+shortcut_in_tooltip = false
+
+[node name="93" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k2vra")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/93" index="1"]
+shortcut_in_tooltip = false
+
+[node name="94" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8uhti")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/94" index="1"]
+shortcut_in_tooltip = false
+
+[node name="95" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_250vk")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/95" index="1"]
+shortcut_in_tooltip = false
+
+[node name="96" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8pcp3")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/96" index="1"]
+shortcut_in_tooltip = false
+
+[node name="97" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sl16r")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/97" index="1"]
+shortcut_in_tooltip = false
+
+[node name="98" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3pi4d")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/98" index="1"]
+shortcut_in_tooltip = false
+
+[node name="99" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yl7wk")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/99" index="1"]
+shortcut_in_tooltip = false
+
+[node name="100" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ccd0")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/100" index="1"]
+shortcut_in_tooltip = false
+
+[node name="101" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rnrxm")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/101" index="1"]
+shortcut_in_tooltip = false
+
+[node name="102" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_224nk")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/102" index="1"]
+shortcut_in_tooltip = false
+
+[node name="103" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3qbt3")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/103" index="1"]
+shortcut_in_tooltip = false
+
+[node name="104" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2w76m")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/104" index="1"]
+shortcut_in_tooltip = false
+
+[node name="105" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o2eao")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/105" index="1"]
+shortcut_in_tooltip = false
+
+[node name="106" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2gffx")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/106" index="1"]
+shortcut_in_tooltip = false
+
+[node name="107" parent="颜料选择/颜料板/容器" instance=ExtResource("1_qasb1")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ok2re")
+script = ExtResource("4_3m261")
+id = 0
+color_vector = Vector2(0, 0)
+
+[node name="按钮" parent="颜料选择/颜料板/容器/107" index="1"]
+shortcut_in_tooltip = false
+
+[node name="调色板" type="Panel" parent="颜料选择"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0142857
+anchor_top = 0.75
+anchor_right = 0.982857
+anchor_bottom = 0.986111
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ktvi")
+metadata/_edit_use_anchors_ = true
+
+[node name="主体" parent="颜料选择/调色板" instance=ExtResource("25_3s0rl")]
+layout_mode = 1
+anchor_left = 0.10767
+anchor_top = 0.0529412
+anchor_right = 0.933628
+anchor_bottom = 0.288235
+
+[node name="滑动条" parent="颜料选择/调色板/主体/H" index="0"]
+offset_right = 1.20001
+
+[node name="滑动杆" parent="颜料选择/调色板/主体/H/滑动条" index="1"]
+offset_top = -3.0
+offset_right = -1.22449
+offset_bottom = -1.0
+
+[node name="黑白" parent="颜料选择/调色板" instance=ExtResource("25_3s0rl")]
+layout_mode = 1
+anchor_left = 0.10767
+anchor_top = 0.352941
+anchor_right = 0.933628
+anchor_bottom = 0.588235
+script = ExtResource("26_130rn")
+
+[node name="H" parent="颜料选择/调色板/黑白" index="0"]
+texture = SubResource("GradientTexture1D_spcwb")
+
+[node name="滑动条" parent="颜料选择/调色板/黑白/H" index="0"]
+offset_right = 1.20001
+
+[node name="滑动杆" parent="颜料选择/调色板/黑白/H/滑动条" index="1"]
+offset_top = -3.0
+offset_right = -1.22449
+offset_bottom = -1.0
+
+[node name="显示颜色" type="Panel" parent="颜料选择/调色板"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10767
+anchor_top = 0.705883
+anchor_right = 0.935103
+anchor_bottom = 0.941177
+theme_override_styles/panel = SubResource("StyleBoxFlat_uyxrg")
+metadata/_edit_use_anchors_ = true
 
 [node name="导出" type="Panel" parent="."]
 visible = false
@@ -5182,346 +7171,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "D"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键7" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键7"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键7"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键8" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键8"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键8"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键9" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键9"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键9"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键10" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键10"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料4"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键10"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "4"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键11" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键11"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料5"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键11"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "5"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键12" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键12"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料6"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键12"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "6"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键13" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键13"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料7"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键13"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "7"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键14" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键14"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料8"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键14"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "8"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键15" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键15"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料9"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键15"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "9"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="快捷键16" type="Panel" parent="设置/快捷键/滚动容器/容器"]
-clip_children = 2
-clip_contents = true
-custom_minimum_size = Vector2(270, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_q2s20")
-metadata/_edit_use_anchors_ = true
-
-[node name="文本" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键16"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "颜料10"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="键值" type="Label" parent="设置/快捷键/滚动容器/容器/快捷键16"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -6333,16 +7982,117 @@ vertical_alignment = 1
 [connection signal="value_change" from="功能界面/音乐播放器/背景板/音量/滑动条" to="功能界面/音乐播放器" method="音量调整"]
 [connection signal="value_change" from="功能界面/音乐播放器/背景板/音高/滑动条" to="功能界面/音乐播放器" method="音高调整"]
 [connection signal="button_pressed" from="功能界面/音乐播放器/按钮" to="功能界面/音乐播放器" method="音乐按钮"]
-[connection signal="button_pressed" from="颜料选择/0" to="颜料选择/0" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/1" to="颜料选择/1" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/2" to="颜料选择/2" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/3" to="颜料选择/3" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/4" to="颜料选择/4" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/5" to="颜料选择/5" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/6" to="颜料选择/6" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/7" to="颜料选择/7" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/8" to="颜料选择/8" method="按钮按下"]
-[connection signal="button_pressed" from="颜料选择/9" to="颜料选择/9" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/0" to="颜料选择/颜料板/容器/0" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/1" to="颜料选择/颜料板/容器/1" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/2" to="颜料选择/颜料板/容器/2" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/3" to="颜料选择/颜料板/容器/3" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/4" to="颜料选择/颜料板/容器/4" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/5" to="颜料选择/颜料板/容器/5" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/6" to="颜料选择/颜料板/容器/6" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/7" to="颜料选择/颜料板/容器/7" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/8" to="颜料选择/颜料板/容器/8" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/9" to="颜料选择/颜料板/容器/9" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/10" to="颜料选择/颜料板/容器/10" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/11" to="颜料选择/颜料板/容器/11" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/12" to="颜料选择/颜料板/容器/12" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/13" to="颜料选择/颜料板/容器/13" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/14" to="颜料选择/颜料板/容器/14" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/15" to="颜料选择/颜料板/容器/15" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/16" to="颜料选择/颜料板/容器/16" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/17" to="颜料选择/颜料板/容器/17" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/18" to="颜料选择/颜料板/容器/18" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/19" to="颜料选择/颜料板/容器/19" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/20" to="颜料选择/颜料板/容器/20" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/21" to="颜料选择/颜料板/容器/21" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/22" to="颜料选择/颜料板/容器/22" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/23" to="颜料选择/颜料板/容器/23" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/24" to="颜料选择/颜料板/容器/24" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/25" to="颜料选择/颜料板/容器/25" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/26" to="颜料选择/颜料板/容器/26" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/27" to="颜料选择/颜料板/容器/27" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/28" to="颜料选择/颜料板/容器/28" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/29" to="颜料选择/颜料板/容器/29" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/30" to="颜料选择/颜料板/容器/30" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/31" to="颜料选择/颜料板/容器/31" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/32" to="颜料选择/颜料板/容器/32" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/33" to="颜料选择/颜料板/容器/33" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/34" to="颜料选择/颜料板/容器/34" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/35" to="颜料选择/颜料板/容器/35" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/36" to="颜料选择/颜料板/容器/36" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/37" to="颜料选择/颜料板/容器/37" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/38" to="颜料选择/颜料板/容器/38" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/39" to="颜料选择/颜料板/容器/39" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/40" to="颜料选择/颜料板/容器/40" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/41" to="颜料选择/颜料板/容器/41" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/42" to="颜料选择/颜料板/容器/42" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/43" to="颜料选择/颜料板/容器/43" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/44" to="颜料选择/颜料板/容器/44" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/45" to="颜料选择/颜料板/容器/45" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/46" to="颜料选择/颜料板/容器/46" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/47" to="颜料选择/颜料板/容器/47" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/48" to="颜料选择/颜料板/容器/48" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/49" to="颜料选择/颜料板/容器/49" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/50" to="颜料选择/颜料板/容器/50" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/51" to="颜料选择/颜料板/容器/51" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/52" to="颜料选择/颜料板/容器/52" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/53" to="颜料选择/颜料板/容器/53" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/54" to="颜料选择/颜料板/容器/54" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/55" to="颜料选择/颜料板/容器/55" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/56" to="颜料选择/颜料板/容器/56" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/57" to="颜料选择/颜料板/容器/57" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/58" to="颜料选择/颜料板/容器/58" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/59" to="颜料选择/颜料板/容器/59" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/60" to="颜料选择/颜料板/容器/60" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/61" to="颜料选择/颜料板/容器/61" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/62" to="颜料选择/颜料板/容器/62" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/63" to="颜料选择/颜料板/容器/63" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/64" to="颜料选择/颜料板/容器/64" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/65" to="颜料选择/颜料板/容器/65" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/66" to="颜料选择/颜料板/容器/66" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/67" to="颜料选择/颜料板/容器/67" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/68" to="颜料选择/颜料板/容器/68" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/69" to="颜料选择/颜料板/容器/69" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/70" to="颜料选择/颜料板/容器/70" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/71" to="颜料选择/颜料板/容器/71" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/72" to="颜料选择/颜料板/容器/72" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/73" to="颜料选择/颜料板/容器/73" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/74" to="颜料选择/颜料板/容器/74" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/75" to="颜料选择/颜料板/容器/75" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/76" to="颜料选择/颜料板/容器/76" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/77" to="颜料选择/颜料板/容器/77" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/78" to="颜料选择/颜料板/容器/78" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/79" to="颜料选择/颜料板/容器/79" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/80" to="颜料选择/颜料板/容器/80" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/81" to="颜料选择/颜料板/容器/81" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/82" to="颜料选择/颜料板/容器/82" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/83" to="颜料选择/颜料板/容器/83" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/84" to="颜料选择/颜料板/容器/84" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/85" to="颜料选择/颜料板/容器/85" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/86" to="颜料选择/颜料板/容器/86" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/87" to="颜料选择/颜料板/容器/87" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/88" to="颜料选择/颜料板/容器/88" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/89" to="颜料选择/颜料板/容器/89" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/90" to="颜料选择/颜料板/容器/90" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/91" to="颜料选择/颜料板/容器/91" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/92" to="颜料选择/颜料板/容器/92" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/93" to="颜料选择/颜料板/容器/93" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/94" to="颜料选择/颜料板/容器/94" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/95" to="颜料选择/颜料板/容器/95" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/96" to="颜料选择/颜料板/容器/96" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/97" to="颜料选择/颜料板/容器/97" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/98" to="颜料选择/颜料板/容器/98" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/99" to="颜料选择/颜料板/容器/99" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/100" to="颜料选择/颜料板/容器/100" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/101" to="颜料选择/颜料板/容器/101" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/102" to="颜料选择/颜料板/容器/102" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/103" to="颜料选择/颜料板/容器/103" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/104" to="颜料选择/颜料板/容器/104" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/105" to="颜料选择/颜料板/容器/105" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/106" to="颜料选择/颜料板/容器/106" method="按钮按下"]
+[connection signal="button_pressed" from="颜料选择/颜料板/容器/107" to="颜料选择/颜料板/容器/107" method="按钮按下"]
+[connection signal="back_color" from="颜料选择/调色板/主体" to="颜料选择/调色板/黑白" method="颜色传递"]
+[connection signal="back_color" from="颜料选择/调色板/黑白" to="颜料选择/调色板/黑白" method="自传递颜色"]
+[connection signal="last_color" from="颜料选择/调色板/黑白" to="颜料选择/颜料板" method="接受颜色"]
 [connection signal="button_pressed" from="导出/背景板/加载" to="导出" method="加载"]
 [connection signal="button_pressed" from="导出/背景板/保存" to="导出" method="保存"]
 [connection signal="button_pressed" from="导出/背景板/导出" to="导出" method="导出"]
@@ -6386,8 +8136,116 @@ vertical_alignment = 1
 [editable path="功能界面/音乐播放器/背景板/音量/滑动条"]
 [editable path="功能界面/音乐播放器/背景板/音高/滑动条"]
 [editable path="功能界面/音乐播放器/按钮"]
-[editable path="颜料选择/0"]
-[editable path="颜料选择/1"]
+[editable path="颜料选择/颜料板/容器/0"]
+[editable path="颜料选择/颜料板/容器/1"]
+[editable path="颜料选择/颜料板/容器/2"]
+[editable path="颜料选择/颜料板/容器/3"]
+[editable path="颜料选择/颜料板/容器/4"]
+[editable path="颜料选择/颜料板/容器/5"]
+[editable path="颜料选择/颜料板/容器/6"]
+[editable path="颜料选择/颜料板/容器/7"]
+[editable path="颜料选择/颜料板/容器/8"]
+[editable path="颜料选择/颜料板/容器/9"]
+[editable path="颜料选择/颜料板/容器/10"]
+[editable path="颜料选择/颜料板/容器/11"]
+[editable path="颜料选择/颜料板/容器/12"]
+[editable path="颜料选择/颜料板/容器/13"]
+[editable path="颜料选择/颜料板/容器/14"]
+[editable path="颜料选择/颜料板/容器/15"]
+[editable path="颜料选择/颜料板/容器/16"]
+[editable path="颜料选择/颜料板/容器/17"]
+[editable path="颜料选择/颜料板/容器/18"]
+[editable path="颜料选择/颜料板/容器/19"]
+[editable path="颜料选择/颜料板/容器/20"]
+[editable path="颜料选择/颜料板/容器/21"]
+[editable path="颜料选择/颜料板/容器/22"]
+[editable path="颜料选择/颜料板/容器/23"]
+[editable path="颜料选择/颜料板/容器/24"]
+[editable path="颜料选择/颜料板/容器/25"]
+[editable path="颜料选择/颜料板/容器/26"]
+[editable path="颜料选择/颜料板/容器/27"]
+[editable path="颜料选择/颜料板/容器/28"]
+[editable path="颜料选择/颜料板/容器/29"]
+[editable path="颜料选择/颜料板/容器/30"]
+[editable path="颜料选择/颜料板/容器/31"]
+[editable path="颜料选择/颜料板/容器/32"]
+[editable path="颜料选择/颜料板/容器/33"]
+[editable path="颜料选择/颜料板/容器/34"]
+[editable path="颜料选择/颜料板/容器/35"]
+[editable path="颜料选择/颜料板/容器/36"]
+[editable path="颜料选择/颜料板/容器/37"]
+[editable path="颜料选择/颜料板/容器/38"]
+[editable path="颜料选择/颜料板/容器/39"]
+[editable path="颜料选择/颜料板/容器/40"]
+[editable path="颜料选择/颜料板/容器/41"]
+[editable path="颜料选择/颜料板/容器/42"]
+[editable path="颜料选择/颜料板/容器/43"]
+[editable path="颜料选择/颜料板/容器/44"]
+[editable path="颜料选择/颜料板/容器/45"]
+[editable path="颜料选择/颜料板/容器/46"]
+[editable path="颜料选择/颜料板/容器/47"]
+[editable path="颜料选择/颜料板/容器/48"]
+[editable path="颜料选择/颜料板/容器/49"]
+[editable path="颜料选择/颜料板/容器/50"]
+[editable path="颜料选择/颜料板/容器/51"]
+[editable path="颜料选择/颜料板/容器/52"]
+[editable path="颜料选择/颜料板/容器/53"]
+[editable path="颜料选择/颜料板/容器/54"]
+[editable path="颜料选择/颜料板/容器/55"]
+[editable path="颜料选择/颜料板/容器/56"]
+[editable path="颜料选择/颜料板/容器/57"]
+[editable path="颜料选择/颜料板/容器/58"]
+[editable path="颜料选择/颜料板/容器/59"]
+[editable path="颜料选择/颜料板/容器/60"]
+[editable path="颜料选择/颜料板/容器/61"]
+[editable path="颜料选择/颜料板/容器/62"]
+[editable path="颜料选择/颜料板/容器/63"]
+[editable path="颜料选择/颜料板/容器/64"]
+[editable path="颜料选择/颜料板/容器/65"]
+[editable path="颜料选择/颜料板/容器/66"]
+[editable path="颜料选择/颜料板/容器/67"]
+[editable path="颜料选择/颜料板/容器/68"]
+[editable path="颜料选择/颜料板/容器/69"]
+[editable path="颜料选择/颜料板/容器/70"]
+[editable path="颜料选择/颜料板/容器/71"]
+[editable path="颜料选择/颜料板/容器/72"]
+[editable path="颜料选择/颜料板/容器/73"]
+[editable path="颜料选择/颜料板/容器/74"]
+[editable path="颜料选择/颜料板/容器/75"]
+[editable path="颜料选择/颜料板/容器/76"]
+[editable path="颜料选择/颜料板/容器/77"]
+[editable path="颜料选择/颜料板/容器/78"]
+[editable path="颜料选择/颜料板/容器/79"]
+[editable path="颜料选择/颜料板/容器/80"]
+[editable path="颜料选择/颜料板/容器/81"]
+[editable path="颜料选择/颜料板/容器/82"]
+[editable path="颜料选择/颜料板/容器/83"]
+[editable path="颜料选择/颜料板/容器/84"]
+[editable path="颜料选择/颜料板/容器/85"]
+[editable path="颜料选择/颜料板/容器/86"]
+[editable path="颜料选择/颜料板/容器/87"]
+[editable path="颜料选择/颜料板/容器/88"]
+[editable path="颜料选择/颜料板/容器/89"]
+[editable path="颜料选择/颜料板/容器/90"]
+[editable path="颜料选择/颜料板/容器/91"]
+[editable path="颜料选择/颜料板/容器/92"]
+[editable path="颜料选择/颜料板/容器/93"]
+[editable path="颜料选择/颜料板/容器/94"]
+[editable path="颜料选择/颜料板/容器/95"]
+[editable path="颜料选择/颜料板/容器/96"]
+[editable path="颜料选择/颜料板/容器/97"]
+[editable path="颜料选择/颜料板/容器/98"]
+[editable path="颜料选择/颜料板/容器/99"]
+[editable path="颜料选择/颜料板/容器/100"]
+[editable path="颜料选择/颜料板/容器/101"]
+[editable path="颜料选择/颜料板/容器/102"]
+[editable path="颜料选择/颜料板/容器/103"]
+[editable path="颜料选择/颜料板/容器/104"]
+[editable path="颜料选择/颜料板/容器/105"]
+[editable path="颜料选择/颜料板/容器/106"]
+[editable path="颜料选择/颜料板/容器/107"]
+[editable path="颜料选择/调色板/主体"]
+[editable path="颜料选择/调色板/黑白"]
 [editable path="导出/背景板/加载"]
 [editable path="导出/背景板/保存"]
 [editable path="导出/背景板/导出"]

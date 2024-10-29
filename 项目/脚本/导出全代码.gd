@@ -1,23 +1,5 @@
 extends Panel
 @export var name_tag:String
-var string_all:String ="vn -1.0000 -0.0000 -0.0000
-vn -0.0000 -0.0000 -1.0000
-vn 1.0000 -0.0000 -0.0000
-vn -0.0000 -0.0000 1.0000
-vn -0.0000 -1.0000 -0.0000
-vn -0.0000 1.0000 -0.0000
-
-vt 0.05 0.5
-vt 0.15 0.5
-vt 0.25 0.5
-vt 0.35 0.5
-vt 0.45 0.5
-vt 0.55 0.5
-vt 0.65 0.5
-vt 0.75 0.5
-vt 0.85 0.5
-vt 0.95 0.5
-\n"
 @export var num_array:Array
 @export var block_size:float = 0.5
 var load_path:String
@@ -28,65 +10,78 @@ Kd 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd"
 
+var color_array:Array
+
 func objstring():
-	var return_string:String = "#课程设计软件制作" + "\n"
-	return_string += "mtllib"+" "+name_tag+".mtl" + "\n"	
-	return_string += "o " + name_tag + "\n"	
-	var num := 0	
+	var string_name:String =  "#课程设计软件制作" + "\n"
+	string_name += "mtllib"+" "+name_tag+".mtl" + "\n"	
+	string_name += "o " + name_tag + "\n"	
+	
+	var string_v:String
+
 	for i in NewData.block_list:
 		for t in num_array:
 			var temp_position:= Vector3(i.z,i.x,i.y)  * block_size
 			var temp = temp_position + t *(block_size /2)
-			return_string += "v"+" "+str(temp.x)+" "+str(temp.y)+" "+str(temp.z)+"\n"
-	return_string += string_all		
-	return_string += "s 0\n"
-	
+			string_v += "v"+" "+str(temp.x)+" "+str(temp.y)+" "+str(temp.z)+"\n"
+	var string_vn:String = "vn -1.0000 -0.0000 -0.0000
+vn -0.0000 -0.0000 -1.0000
+vn 1.0000 -0.0000 -0.0000
+vn -0.0000 -0.0000 1.0000
+vn -0.0000 -1.0000 -0.0000
+vn -0.0000 1.0000 -0.0000\n"
+
+	var string_vt:String
+	color_array.clear()
+	for i in NewData.draw_list:
+		if not color_array.has(NewData.draw_list.get(i)):
+			color_array.append(NewData.draw_list.get(i))
+	var color_all_num = color_array.size()		
+	for i in range(color_all_num):
+		string_vt += "vt" +" " + str(float(i)/float(color_all_num)+ float(1)/ float(color_all_num *2))+" " +"0.5\n"
+	var string_f:String	= "s 0\n"
+	var num := 0	
 	for i in NewData.draw_list:	
-		var temp_num:int
-		for color_num in range(NewData.color_array.size()):		
-
-			print(NewData.draw_list.get(i))
-			print(NewData.color_array[color_num])
-			
-			if NewData.draw_list.get(i) == NewData.color_array[color_num]:
-				temp_num = color_num + 1
-
+		var temp_num:int = 0
+		for color_num in range(color_all_num):
+			if NewData.draw_list.get(i) == color_array[color_num]:
+				temp_num = color_num + 1			
 				break
 			pass
-		return_string += "f"+" "+str(num * 8 +1) +"/"+str(temp_num)+"/1" +" "
-		return_string += str(num * 8 +2) +"/"+str(temp_num)+"/1" +" "
-		return_string += str(num * 8 +4) +"/"+str(temp_num)+"/1" +" "
-		return_string += str(num * 8 +3) +"/"+str(temp_num)+"/1" +"\n"
+		string_f += "f"+" "+str(num * 8 +1) +"/"+str(temp_num)+"/1" +" "
+		string_f += str(num * 8 +2) +"/"+str(temp_num)+"/1" +" "
+		string_f += str(num * 8 +4) +"/"+str(temp_num)+"/1" +" "
+		string_f += str(num * 8 +3) +"/"+str(temp_num)+"/1" +"\n"
 		
-		return_string += "f"+" "+str(num * 8 +3) +"/"+str(temp_num)+"/2" +" "
-		return_string += str(num * 8 +4) +"/"+str(temp_num)+"/2" +" "
-		return_string += str(num * 8 +8) +"/"+str(temp_num)+"/2" +" "
-		return_string += str(num * 8 +7) +"/"+str(temp_num)+"/2" +"\n"
+		string_f += "f"+" "+str(num * 8 +3) +"/"+str(temp_num)+"/2" +" "
+		string_f += str(num * 8 +4) +"/"+str(temp_num)+"/2" +" "
+		string_f += str(num * 8 +8) +"/"+str(temp_num)+"/2" +" "
+		string_f += str(num * 8 +7) +"/"+str(temp_num)+"/2" +"\n"
 		
 		
-		return_string += "f"+" "+str(num * 8 +7) +"/"+str(temp_num)+"/3" +" "
-		return_string += str(num * 8 +8) +"/"+str(temp_num)+"/3" +" "
-		return_string += str(num * 8 +6) +"/"+str(temp_num)+"/3" +" "
-		return_string += str(num * 8 +5) +"/"+str(temp_num)+"/3" +"\n"
+		string_f += "f"+" "+str(num * 8 +7) +"/"+str(temp_num)+"/3" +" "
+		string_f += str(num * 8 +8) +"/"+str(temp_num)+"/3" +" "
+		string_f += str(num * 8 +6) +"/"+str(temp_num)+"/3" +" "
+		string_f += str(num * 8 +5) +"/"+str(temp_num)+"/3" +"\n"
 		
-		return_string += "f"+" "+str(num * 8 +2) +"/"+str(temp_num)+"/4" +" "
-		return_string += str(num * 8 +1) +"/"+str(temp_num)+"/4" +" "
-		return_string += str(num * 8 +5) +"/"+str(temp_num)+"/4" +" "
-		return_string += str(num * 8 +6) +"/"+str(temp_num)+"/4" +"\n"
+		string_f += "f"+" "+str(num * 8 +2) +"/"+str(temp_num)+"/4" +" "
+		string_f += str(num * 8 +1) +"/"+str(temp_num)+"/4" +" "
+		string_f += str(num * 8 +5) +"/"+str(temp_num)+"/4" +" "
+		string_f += str(num * 8 +6) +"/"+str(temp_num)+"/4" +"\n"
 		
-		return_string += "f"+" "+str(num * 8 +3) +"/"+str(temp_num)+"/5" +" "
-		return_string += str(num * 8 +7) +"/"+str(temp_num)+"/5" +" "
-		return_string += str(num * 8 +5) +"/"+str(temp_num)+"/5" +" "
-		return_string += str(num * 8 +1) +"/"+str(temp_num)+"/5" +"\n"
+		string_f += "f"+" "+str(num * 8 +3) +"/"+str(temp_num)+"/5" +" "
+		string_f += str(num * 8 +7) +"/"+str(temp_num)+"/5" +" "
+		string_f += str(num * 8 +5) +"/"+str(temp_num)+"/5" +" "
+		string_f += str(num * 8 +1) +"/"+str(temp_num)+"/5" +"\n"
 		
-		return_string += "f"+" "+str(num * 8 +8) +"/"+str(temp_num)+"/6" +" "
-		return_string += str(num * 8 +4) +"/"+str(temp_num)+"/6" +" "
-		return_string += str(num * 8 +2) +"/"+str(temp_num)+"/6" +" "
-		return_string += str(num * 8 +6) +"/"+str(temp_num)+"/6" +"\n"
+		string_f += "f"+" "+str(num * 8 +8) +"/"+str(temp_num)+"/6" +" "
+		string_f += str(num * 8 +4) +"/"+str(temp_num)+"/6" +" "
+		string_f += str(num * 8 +2) +"/"+str(temp_num)+"/6" +" "
+		string_f += str(num * 8 +6) +"/"+str(temp_num)+"/6" +"\n"
 		
 		num += 1
 	
-	return return_string
+	return string_name +string_v + string_vn + string_vt + string_f 
 
 func OBJ文件保存(path: String) -> void:
 	load_path = path
@@ -108,9 +103,11 @@ func OBJ文件保存(path: String) -> void:
 		var file_mtl = FileAccess.open(fail_path + ".mtl", FileAccess.WRITE)
 		file_mtl.store_string(mtl_string +" "+name_tag + ".png")
 		
-		var texture = load("res://素材/颜料表.png")
-		var image: Image = texture.get_image()
-		image.save_png(fail_path + ".png")
+
+		var new_image = Image.create(color_array.size(), 1, false, Image.FORMAT_RGBA8)
+		for i in range(color_array.size()):
+			new_image.set_pixel(i,0,color_array[i])
+		new_image.save_png(fail_path + ".png")
 		
 
 	pass 
@@ -139,6 +136,12 @@ func 存档(path: String) -> void:
 	config.set_value("课程设计数据存储","摄像机坐标",%"摄像机".position)
 	config.set_value("课程设计数据存储","摄像机旋转",%"摄像机".get_rotation())
 	
+	var color_to_save ={}
+	for i in $"../颜料选择/颜料板/容器".get_children():
+		color_to_save[i.color_vector] = i.to_color
+		pass
+	config.set_value("课程设计数据存储","色盘",color_to_save)
+	
 	config.set_value("课程设计数据存储","灵敏度",NewData.rorate_angle)
 	config.set_value("课程设计数据存储","移动速度",NewData.move_speed)
 	NewData.load_path = path
@@ -165,7 +168,18 @@ func 读档(path: String) -> void:
 		NewData.rorate_angle = config.get_value("课程设计数据存储","灵敏度")
 	if config.has_section_key("课程设计数据存储","移动速度"):
 		NewData.move_speed = config.get_value("课程设计数据存储","移动速度")
-	
+	if config.has_section_key("课程设计数据存储","色盘"):		
+		var color_to_load = config.get_value("课程设计数据存储","色盘")
+		var start_num:int = 0
+		for i in color_to_load:
+			$"../颜料选择/颜料板/容器".get_child(start_num).color_vector = i
+			$"../颜料选择/颜料板/容器".get_child(start_num).set_modulate(color_to_load.get(i))
+			$"../颜料选择/颜料板/容器".get_child(start_num).to_color = color_to_load.get(i)
+			start_num += 1
+			print(start_num)
+		pass
+		
+		
 	NewData.make_set()
 	NewData.father_draw()
 	NewData.block_list.clear()

@@ -1,0 +1,181 @@
+[gd_scene load_steps=8 format=3 uid="uid://du2elvl6wprun"]
+
+[ext_resource type="Script" path="res://脚本/颜色.gd" id="1_j18q2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_buuwm"]
+bg_color = Color(0, 0, 0, 1)
+corner_detail = 20
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="Gradient" id="Gradient_awr0k"]
+offsets = PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0.00784314, 1, 1, 1, 0, 0, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 6
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vrkru"]
+gradient = SubResource("Gradient_awr0k")
+
+[sub_resource type="GDScript" id="GDScript_0q3nh"]
+script/source = "extends Control
+
+var is_mouse_in:bool
+func 鼠标进入() -> void:
+	is_mouse_in = true
+	pass
+
+func 鼠标离开() -> void:
+	is_mouse_in = false
+	pass
+
+var max_value
+@export var value:float
+var start_value
+func _ready() -> void:
+	max_value = $\"滑动杆\".position.x * 2
+	start_value = value
+	set_value()
+
+var is_mouse:bool
+var now_mouse:Vector2
+var last_mouse:Vector2
+
+signal value_change(to_value:float)
+
+var checkit:bool
+
+func _physics_process(delta: float) -> void:
+	if is_mouse_in or is_mouse:
+		if Input.is_action_just_pressed(\"mouse_right\"):
+			$\"滑动杆\".position.x = max_value * start_value
+			value = start_value
+			emit_signal(\"value_change\",value)		
+		is_mouse = Input.is_action_pressed(\"mouse_left\")
+		if Input.is_action_just_pressed(\"mouse_left\"):
+			last_mouse = get_viewport().get_mouse_position()
+			now_mouse = last_mouse
+			checkit = true
+		if is_mouse and checkit:
+			now_mouse = get_viewport().get_mouse_position()
+			if last_mouse.x != now_mouse.x:
+				$\"滑动杆\".position.x += now_mouse.x - last_mouse.x
+				last_mouse = now_mouse
+			emit_signal(\"value_change\",value)
+		value = $\"滑动杆\".position.x/max_value
+		math_value()
+	if checkit:
+		if Input.is_action_just_released(\"mouse_left\"):
+			checkit = false
+		pass
+
+func set_value(to_value:float = -10):
+	if to_value >= 0:
+		if to_value >= 1:
+			value = 1
+		else:
+			value = to_value
+	$\"滑动杆\".position.x = value * max_value
+	
+func set_value_signal(to_value:float = -10):
+	if to_value >= 0:
+		if to_value >= 1:
+			value = 1
+		else:
+			value = to_value
+	emit_signal(\"value_change\",value)
+	$\"滑动杆\".position.x = value * max_value
+
+func math_value():
+	if value < 0:
+		value = 0
+	elif value > 1:
+		value = 1
+	set_value()
+	
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyxo5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62u61"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+corner_detail = 20
+
+[node name="主体" type="Panel"]
+anchors_preset = -1
+anchor_left = 0.0833333
+anchor_top = 0.0625
+anchor_right = 0.916667
+anchor_bottom = 0.3125
+theme_override_styles/panel = SubResource("StyleBoxFlat_buuwm")
+script = ExtResource("1_j18q2")
+metadata/_edit_use_anchors_ = true
+
+[node name="H" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_vrkru")
+
+[node name="滑动条" type="Control" parent="H"]
+layout_mode = 1
+anchor_top = 0.215
+anchor_right = 0.98
+anchor_bottom = 0.715
+script = SubResource("GDScript_0q3nh")
+metadata/_edit_use_anchors_ = true
+
+[node name="滑动条" type="Panel" parent="H/滑动条"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.7
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uyxo5")
+metadata/_edit_use_anchors_ = true
+
+[node name="滑动杆" type="Panel" parent="H/滑动条"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = -0.6
+anchor_right = 0.520408
+anchor_bottom = 1.8
+theme_override_styles/panel = SubResource("StyleBoxFlat_62u61")
+metadata/_edit_use_anchors_ = true
+
+[node name="输入框" type="LineEdit" parent="."]
+clip_contents = true
+layout_mode = 0
+anchor_left = -0.110714
+anchor_right = -0.0125
+anchor_bottom = 1.0
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(1, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+alignment = 2
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="value_change" from="H/滑动条" to="." method="值发生改变"]
+[connection signal="mouse_entered" from="H/滑动条/滑动杆" to="H/滑动条" method="鼠标进入"]
+[connection signal="mouse_exited" from="H/滑动条/滑动杆" to="H/滑动条" method="鼠标离开"]
+[connection signal="text_submitted" from="输入框" to="." method="玩家自定义颜色"]
