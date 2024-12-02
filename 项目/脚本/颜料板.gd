@@ -2,13 +2,6 @@ extends Panel
 
 @export var chose_id:int
 
-func _ready() -> void:
-	#var aa = $"../调色板/H/H".get_texture().get_gradient().get_color(2)
-	#print(aa)
-
-	
-	pass
-
 
 var mouse
 

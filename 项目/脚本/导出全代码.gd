@@ -9,16 +9,12 @@ Ka 0.000 0.000 0.000
 Kd 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd"
-
 var color_array:Array
-
 func objstring():
 	var string_name:String =  "#课程设计软件制作" + "\n"
 	string_name += "mtllib"+" "+name_tag+".mtl" + "\n"	
 	string_name += "o " + name_tag + "\n"	
-	
 	var string_v:String
-
 	for i in NewData.block_list:
 		for t in num_array:
 			var temp_position:= Vector3(i.z,i.x,i.y)  * block_size
@@ -30,7 +26,6 @@ vn 1.0000 -0.0000 -0.0000
 vn -0.0000 -0.0000 1.0000
 vn -0.0000 -1.0000 -0.0000
 vn -0.0000 1.0000 -0.0000\n"
-
 	var string_vt:String
 	color_array.clear()
 	for i in NewData.draw_list:
@@ -80,9 +75,7 @@ vn -0.0000 1.0000 -0.0000\n"
 		string_f += str(num * 8 +6) +"/"+str(temp_num)+"/6" +"\n"
 		
 		num += 1
-	
 	return string_name +string_v + string_vn + string_vt + string_f 
-
 func OBJ文件保存(path: String) -> void:
 	load_path = path
 	if load_path == "":
@@ -111,23 +104,19 @@ func OBJ文件保存(path: String) -> void:
 		
 
 	pass 
-
 func 加载() -> void:
 	$"../文件夹相关/存档读取".set_visible(true)
 	pass
-
 func 保存() -> void:
 	if NewData.block_list.is_empty():
 		return
 	$"../文件夹相关/存档加载".set_visible(true)
 	pass
-
 func 导出() -> void:
 	if NewData.block_list.is_empty():		
 		return	
 	$"../文件夹相关/文件保存框".set_visible(true)
 	pass
-
 func 存档(path: String) -> void:
 	
 	var config = ConfigFile.new()
@@ -147,8 +136,6 @@ func 存档(path: String) -> void:
 	NewData.load_path = path
 	config.save(path)
 	pass
-
-
 const block = preload("res://预制体/网格.tscn")
 func 读档(path: String) -> void:
 	var config = ConfigFile.new()

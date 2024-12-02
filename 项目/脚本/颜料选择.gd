@@ -21,5 +21,4 @@ func 按钮按下() -> void:
 	$"../../../调色板/黑白".make_text(color_vector.y)
 	
 	$"../../../调色板/显示颜色".set_modulate(to_color)
-	#NewData.draw_state_change(NewData.last_state)
 	pass
